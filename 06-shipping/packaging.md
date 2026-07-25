@@ -89,7 +89,7 @@ a black box. Ship the `.cs`.
 > **Ship a cleaner.** Construction 0.68a and 0.69a shipped **three separate** stale-`.dso` batch files —
 > `Constructs-DSO-Remover-2.1.bat`, `Constructs-DSO-deleter-1.2.bat`, `JTLdelDSO.bat` — written by
 > different people and all included **[mod-script]**. If your mod ships loose `.cs`, ship one deleter with
-> it. See [The Construction Mod](../40-construction-mod/what-it-changed.md#the-dso-problem-at-scale).
+> it. See [The Construction Mod](../58-construction-mod/what-it-changed.md#the-dso-problem-at-scale).
 
 ### Cleaning `.dso` before packaging
 

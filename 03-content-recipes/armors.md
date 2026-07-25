@@ -144,7 +144,7 @@ source. Treat it as a field that exists purely for a mod to opt into.
 **Raise `horizMaxSpeed`, zero `horizResistFactor`, and set `noFrictionOnSki = true`, and you get the
 "fast" feel that most speed-focused community mods went for** — this is not hypothetical. Classic does
 exactly this, on every armor, and the resulting numbers are fully documented in
-[22 · Classic 1.1](../22-classic-1-1/README.md#the-physics-change-skiing-friction-and-momentum) as a
+[38 · Classic 1.1](../38-classic-1-1/README.md#the-physics-change-skiing-friction-and-momentum) as a
 worked, field-by-field example of retuning this exact system.
 
 ### Heat signature
@@ -442,8 +442,8 @@ The shipped packs use exactly these. See [Packs](packs.md).
 - [Packs](packs.md) — per-object modification patterns
 - [Damage and type masks](damage-and-typemasks.md) — the `*PlayerDamageProfile` parents
 - [Audio](audio.md) — the footstep and impact sound profiles
-- [08 · The base ruleset](../08-base-ruleset/README.md#skiing-friction-and-momentum) — the values base ships, all three weights
-- [22 · Classic 1.1](../22-classic-1-1/README.md#the-physics-change-skiing-friction-and-momentum) — this system, retuned, field by field
+- [31 · The base ruleset](../31-base-ruleset/README.md#skiing-friction-and-momentum) — the values base ships, all three weights
+- [38 · Classic 1.1](../38-classic-1-1/README.md#the-physics-change-skiing-friction-and-momentum) — this system, retuned, field by field
 
 > **On a patched install:** nothing on this page changes. Neither TribesNEXT patch touches gameplay
 > content — see [03 · Content Recipes](README.md#under-the-community-patches).

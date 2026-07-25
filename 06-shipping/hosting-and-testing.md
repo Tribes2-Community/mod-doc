@@ -248,7 +248,7 @@ On top of the vanilla checklist:
 
 - [Packaging](packaging.md) — what to ship once it works
 - [Debugging](debugging.md) — when it does not
-- [30 · Running Classic today](../30-running-classic-today/README.md) — the install stack an actual public server runs, end to end
+- [50 · Running Classic today](../50-running-classic-today/README.md) — the install stack an actual public server runs, end to end
 - [Launch options](../01-getting-started/launch-options.md) — the full switch list
 - [Mod paths and overrides](../02-engine-model/mod-paths-and-overrides.md) — PURE and the mount stack
 - [Modding against a patched install](../07-community-patches/modding-against-a-patched-install.md#testing-checklist-for-a-patched-install) — the patched test loop

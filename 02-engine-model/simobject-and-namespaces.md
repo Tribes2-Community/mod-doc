@@ -249,7 +249,7 @@ Note the pattern: delete, then clear the reference.
 > from script, serialise it with `obj.save(fileName, <selectedOnly>)` and read the result back with a
 > `FileObject`; the engine's writer walks the real field tables in C++, and static fields land one tab
 > shallower than dynamic ones **[script]**. That is the same call the mission editor uses to write `.mis`
-> files. The [Construction mod](../40-construction-mod/building-systems.md#saving-and-loading-buildings)
+> files. The [Construction mod](../58-construction-mod/building-systems.md#saving-and-loading-buildings)
 > hand-rolls a filtered equivalent when it needs per-datablock control over what gets written.
 
 Guards on class name are everywhere in the shipped scripts **[script]**:

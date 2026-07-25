@@ -71,10 +71,6 @@
     - { title: "RC2a",                    url: /07-community-patches/rc2a }
     - { title: "Modding a patched install", url: /07-community-patches/modding-against-a-patched-install }
 
-- num: "08"
-  title: The Base Ruleset
-  url: /08-base-ruleset/
-
 - num: "09"
   title: The Support Pack
   url: /09-support-pack/
@@ -104,64 +100,124 @@
     - { title: "20 · Environment & finishing", url: /20-bones-environment-finishing/ }
 
 - num: "21"
-  title: Classic
-  url: /21-classic/
-  pages:
-    - { title: "22 · Classic 1.1",          url: /22-classic-1-1/ }
-    - { title: "23 · Classic 1.5.2",        url: /23-classic-152/ }
-    - { title: "24 · The ruleset toggles",  url: /24-classic-ruleset-toggles/ }
+  title: Linux
+  url: /21-linux/
 
-- num: "25–27"
-  title: Evolution Admin Mod
-  url: /25-evolution-admin-mod/
-  pages:
-    - { title: "25 · Architecture",         url: /25-evolution-admin-mod/ }
-    - { title: "26 · In operation",         url: /26-evolution-operation/ }
-    - { title: "27 · teratos' evoClassic",  url: /27-teratos-evoclassic/ }
-
-- num: "28–30"
-  title: TacoServer
-  url: /28-tacoserver/
-  pages:
-    - { title: "28 · Lineage & architecture", url: /28-tacoserver/ }
-    - { title: "29 · In operation",         url: /29-tacoserver-operation/ }
-    - { title: "30 · Running Classic today", url: /30-running-classic-today/ }
-
-- num: "31–39"
+- num: "22–30"
   title: Gametypes
-  url: /31-capture-the-flag/
+  url: /22-capture-the-flag/
   pages:
-    - { title: "31 · Capture the Flag",     url: /31-capture-the-flag/ }
-    - { title: "32 · Defend and Destroy",   url: /32-defend-and-destroy/ }
-    - { title: "33 · Siege",                url: /33-siege/ }
-    - { title: "34 · Bounty",               url: /34-bounty/ }
-    - { title: "35 · Capture and Hold",     url: /35-capture-and-hold/ }
-    - { title: "36 · Deathmatch",           url: /36-deathmatch/ }
-    - { title: "37 · Hunters & Team Hunters", url: /37-hunters/ }
-    - { title: "38 · Rabbit",               url: /38-rabbit/ }
-    - { title: "39 · Team Rabbit 2",        url: /39-team-rabbit-2/ }
+    - { title: "22 · Capture the Flag",     url: /22-capture-the-flag/ }
+    - { title: "23 · Defend and Destroy",   url: /23-defend-and-destroy/ }
+    - { title: "24 · Siege",                url: /24-siege/ }
+    - { title: "25 · Bounty",               url: /25-bounty/ }
+    - { title: "26 · Capture and Hold",     url: /26-capture-and-hold/ }
+    - { title: "27 · Deathmatch",           url: /27-deathmatch/ }
+    - { title: "28 · Hunters & Team Hunters", url: /28-hunters/ }
+    - { title: "29 · Rabbit",               url: /29-rabbit/ }
+    - { title: "30 · Team Rabbit 2",        url: /30-team-rabbit-2/ }
 
-- num: "40"
+- num: "31"
+  title: The Base Ruleset
+  url: /31-base-ruleset/
+
+- num: "32–36"
+  title: Base derivatives
+  url: /32-bones/
+  pages:
+    - { title: "32 · BONES",              url: /32-bones/ }
+    - { title: "33 · AirKill",            url: /33-airkill/ }
+    - { title: "34 · Triumph",            url: /34-triumph/ }
+    - { title: "35 · NinjaMod",           url: /35-ninja-mod/ }
+    - { title: "36 · tac2",               url: /36-tac2/ }
+
+- num: "37"
+  title: Classic
+  url: /37-classic/
+  pages:
+    - { title: "38 · Classic 1.1",          url: /38-classic-1-1/ }
+    - { title: "39 · Classic 1.5.2",        url: /39-classic-152/ }
+    - { title: "40 · The ruleset toggles",  url: /40-classic-ruleset-toggles/ }
+
+- num: "41–44"
+  title: Classic derivatives
+  url: /41-overdrive/
+  pages:
+    - { title: "41 · Overdrive",          url: /41-overdrive/ }
+    - { title: "42 · T2 Instagib",        url: /42-t2instagib/ }
+    - { title: "43 · Revmod2",            url: /43-revmod2/ }
+    - { title: "44 · Meltdown 2",         url: /44-meltdown/ }
+
+- num: "45–47"
+  title: Evolution Admin Mod
+  url: /45-evolution-admin-mod/
+  pages:
+    - { title: "45 · Architecture",         url: /45-evolution-admin-mod/ }
+    - { title: "46 · In operation",         url: /46-evolution-operation/ }
+    - { title: "47 · teratos' evoClassic",  url: /47-teratos-evoclassic/ }
+
+- num: "48–50"
+  title: TacoServer
+  url: /48-tacoserver/
+  pages:
+    - { title: "48 · Lineage & architecture", url: /48-tacoserver/ }
+    - { title: "49 · In operation",         url: /49-tacoserver-operation/ }
+    - { title: "50 · Running Classic today", url: /50-running-classic-today/ }
+
+- num: "51–57"
+  title: Other combat server-side mods
+  url: /51-small-utilities/
+  pages:
+    - { title: "51 · Small utilities",    url: /51-small-utilities/ }
+    - { title: "52 · botpilot & Werewolf", url: /52-botpilot/ }
+    - { title: "53 · Pirates of the Caribbean", url: /53-potc/ }
+    - { title: "54 · Masters mod",        url: /54-mastersmod/ }
+    - { title: "55 · GibMatch",           url: /55-gibmatch/ }
+    - { title: "56 · Powers Mod",         url: /56-powers-mod/ }
+    - { title: "57 · IronSphere RPG",     url: /57-ironsphere-rpg/ }
+
+- num: "58"
   title: The Construction Mod
-  url: /40-construction-mod/
+  url: /58-construction-mod/
   pages:
-    - { title: "What it changed",         url: /40-construction-mod/what-it-changed }
-    - { title: "Building systems",        url: /40-construction-mod/building-systems }
-    - { title: "Playing Construction",    url: /40-construction-mod/playing }
-    - { title: "Reusable mechanisms",     url: /40-construction-mod/reusable-mechanisms }
+    - { title: "What it changed",         url: /58-construction-mod/what-it-changed }
+    - { title: "Building systems",        url: /58-construction-mod/building-systems }
+    - { title: "Playing Construction",    url: /58-construction-mod/playing }
+    - { title: "Reusable mechanisms",     url: /58-construction-mod/reusable-mechanisms }
 
-- num: "41–48"
+- num: "59–68"
   title: Construction Forks
-  url: /41-metallic-construction/
+  url: /59-power-edition/
   pages:
-    - { title: "41 · Metallic Construction 1.4", url: /41-metallic-construction/ }
-    - { title: "42 · MooCon",             url: /42-moocon/ }
-    - { title: "43 · CCM",                url: /43-ccm/ }
-    - { title: "44 · Power Edition",      url: /44-power-edition/ }
-    - { title: "45 · QuantiumX",          url: /45-quantiumx/ }
-    - { title: "46 · TCCM",               url: /46-tccm/ }
-    - { title: "47 · Ultimate Build 2.0", url: /47-ultimate-build/ }
-    - { title: "48 · c2kconstruction",    url: /48-c2k-construction/ }
+    - { title: "59 · Power Edition",      url: /59-power-edition/ }
+    - { title: "60 · c2kconstruction",    url: /60-c2k-construction/ }
+    - { title: "61 · MooCon",             url: /61-moocon/ }
+    - { title: "62 · Spirit Construction", url: /62-spirit-construction/ }
+    - { title: "63 · Metallic Construction 1.4", url: /63-metallic-construction/ }
+    - { title: "64 · CCM",                url: /64-ccm/ }
+    - { title: "65 · TCCM",               url: /65-tccm/ }
+    - { title: "66 · Ultimate Build 2.0", url: /66-ultimate-build/ }
+    - { title: "67 · Atomic Construction", url: /67-atomic-construction/ }
+    - { title: "68 · QuantiumX",          url: /68-quantiumx/ }
+
+- num: "69–71"
+  title: Combat Construction Mods
+  url: /69-dark-ages-rpg-con/
+  pages:
+    - { title: "69 · Dark Ages RPG Con Mod", url: /69-dark-ages-rpg-con/ }
+    - { title: "70 · ACCM",               url: /70-accm/ }
+    - { title: "71 · Total Warefare Mod", url: /71-total-warefare-mod/ }
+
+- num: "72–77"
+  title: Client Mods
+  url: /72-droc-mod/
+  pages:
+    - { title: "72 · droc mod",           url: /72-droc-mod/ }
+    - { title: "73 · mousemod",           url: /73-mousemod/ }
+    - { title: "74 · T2Bol client content", url: /74-t2bol/ }
+    - { title: "75 · renclient4",         url: /75-renclient/ }
+    - { title: "76 · Team Gauntlet client", url: /76-teamgauntlet-client/ }
+    - { title: "77 · EzRotation & EzVoteOptions", url: /77-ez-utilities/ }
 
 - title: Reference
   url: /reference/

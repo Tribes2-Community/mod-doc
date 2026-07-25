@@ -202,25 +202,25 @@ package MyMod
 ## The shipped roster
 
 Nine gametypes ship in `base/scripts.vl2`, all extending `defaultGame.cs`, plus a tenth — Team Rabbit 2 —
-that ships as its own set of archives entirely outside `scripts.vl2`. Sections 31–39 cover each in depth;
+that ships as its own set of archives entirely outside `scripts.vl2`. Sections 22–30 cover each in depth;
 this table is the map between them **[script]**:
 
 | File | Lines | Covered in |
 |---|---:|---|
-| `CTFGame.cs` | 2014 | [31 · Capture the Flag](../31-capture-the-flag/README.md) |
-| `DnDGame.cs` | 1331 | [32 · Defend and Destroy](../32-defend-and-destroy/README.md) |
-| `SiegeGame.cs` | 1213 | [33 · Siege](../33-siege/README.md) |
-| `BountyGame.cs` | 899 | [34 · Bounty](../34-bounty/README.md) |
-| `CnHGame.cs` | 466 | [35 · Capture and Hold](../35-capture-and-hold/README.md) |
-| `DMGame.cs` | 374 | [36 · Deathmatch](../36-deathmatch/README.md) |
-| `HuntersGame.cs` / `TeamHuntersGame.cs` | 1745 / 614 | [37 · Hunters & Team Hunters](../37-hunters/README.md) |
-| `RabbitGame.cs` | 739 | [38 · Rabbit](../38-rabbit/README.md) |
-| `TR2Game.cs` (own archives) | 3204 | [39 · Team Rabbit 2](../39-team-rabbit-2/README.md) |
+| `CTFGame.cs` | 2014 | [22 · Capture the Flag](../22-capture-the-flag/README.md) |
+| `DnDGame.cs` | 1331 | [23 · Defend and Destroy](../23-defend-and-destroy/README.md) |
+| `SiegeGame.cs` | 1213 | [24 · Siege](../24-siege/README.md) |
+| `BountyGame.cs` | 899 | [25 · Bounty](../25-bounty/README.md) |
+| `CnHGame.cs` | 466 | [26 · Capture and Hold](../26-capture-and-hold/README.md) |
+| `DMGame.cs` | 374 | [27 · Deathmatch](../27-deathmatch/README.md) |
+| `HuntersGame.cs` / `TeamHuntersGame.cs` | 1745 / 614 | [28 · Hunters & Team Hunters](../28-hunters/README.md) |
+| `RabbitGame.cs` | 739 | [29 · Rabbit](../29-rabbit/README.md) |
+| `TR2Game.cs` (own archives) | 3204 | [30 · Team Rabbit 2](../30-team-rabbit-2/README.md) |
 | `SinglePlayerGame.cs` | 1310 | Not covered — the campaign, not a multiplayer gametype |
 
 ### Four relationships to Classic
 
-Reading all nine base gametypes against the Classic mod tree ([21 · Classic](../21-classic/README.md))
+Reading all nine base gametypes against the Classic mod tree ([37 · Classic](../37-classic/README.md))
 sorts them into four categories:
 
 **Shadowed** — Classic ships its own replacement file. Only `CTFGame.cs` and `SiegeGame.cs`, the two
@@ -233,12 +233,12 @@ stack falls through to `base/` for anything the mod does not shadow. Classic cha
 admin surface; it left the party-game modes alone.
 
 **Added to base, not to Classic** — Defend and Destroy is the anomaly documented in
-[08 · The base ruleset](../08-base-ruleset/README.md#the-dnd-anomaly): a gametype written by Classic's own
+[31 · The base ruleset](../31-base-ruleset/README.md#the-dnd-anomaly): a gametype written by Classic's own
 author, z0dd, but shipped by Sierra directly in `base/scripts.vl2` rather than in the Classic mod tree.
 
 **Integrated by reference** — Team Rabbit 2 is none of the above. Classic does not shadow it, but its
 `server.cs` conditionally `exec()`s the base copy, and six other Classic files patch themselves to
-recognise TR2's custom weapons and HUD data. See [39 · Team Rabbit 2](../39-team-rabbit-2/README.md).
+recognise TR2's custom weapons and HUD data. See [30 · Team Rabbit 2](../30-team-rabbit-2/README.md).
 
 ## The `DefaultGame::` callback surface
 
@@ -436,7 +436,7 @@ package RaceGame
 
 Then a mission needs `// MissionTypes = Race` in its header — see [Missions](missions.md).
 
-> **A real example at scale.** The [Construction mod](../40-construction-mod/what-it-changed.md) ships two
+> **A real example at scale.** The [Construction mod](../58-construction-mod/what-it-changed.md) ships two
 > gametypes this way (`ConstructionGame`, `TR2Game`) and preserves the `scripts/*Game.cs` discovery glob
 > verbatim inside its own shadowed `server.cs` **[mod-script]** — a total conversion that still loads its
 > gametypes through Sierra's mechanism untouched.
@@ -520,12 +520,12 @@ your gametype hooks connection directly rather than through `DefaultGame::`, rea
 
 ## Related
 
-- [31–39 · Gametypes](../31-capture-the-flag/README.md) — the full roster, each covered in depth
+- [22–30 · Gametypes](../22-capture-the-flag/README.md) — the full roster, each covered in depth
 - [Missions](missions.md) — the `.mis` side of the pairing
-- [08 · The base ruleset](../08-base-ruleset/README.md) — the eleven shipped gametypes and how thin they are
+- [31 · The base ruleset](../31-base-ruleset/README.md) — the eleven shipped gametypes and how thin they are
 - [Boot sequence](../02-engine-model/boot-sequence.md) — the mission load chain
-- [22 · Classic 1.1](../22-classic-1-1/README.md) — Defend and Destroy, a shipped gametype addition you can read end to end
-- [23 · Classic 1.5.2](../23-classic-152/README.md) — Spawn CTF, and the `ai<Type>.cs` companion in practice
+- [38 · Classic 1.1](../38-classic-1-1/README.md) — Defend and Destroy, a shipped gametype addition you can read end to end
+- [39 · Classic 1.5.2](../39-classic-152/README.md) — Spawn CTF, and the `ai<Type>.cs` companion in practice
 - [Packages](../02-engine-model/packages.md) — the auto-activation convention
 - [AI and bots](ai-bots.md) — the `ai<Type>.cs` companion file
 - [Modding against a patched install](../07-community-patches/modding-against-a-patched-install.md) — the collision surface

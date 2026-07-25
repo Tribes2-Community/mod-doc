@@ -213,7 +213,7 @@ changed most. See [07 · Community Patches](../07-community-patches/README.md).
 
 The corpus and the flagship mods were not separate communities. **BadShot** — author of 26 tutorials here —
 and **DynaBlade** — author of the vehicle-locking tutorial and the "Function Librarys" — are both thanked
-by name in the [Construction mod](../40-construction-mod/README.md)'s `Credits.txt` **[mod-script]**, with
+by name in the [Construction mod](../58-construction-mod/README.md)'s `Credits.txt` **[mod-script]**, with
 DynaBlade co-credited on its 841-line building-persistence system.
 
 The techniques written down in these tutorials are the ones their authors were using to build the largest
@@ -224,4 +224,4 @@ server-side mod on the platform. Read them as working notes from a live project,
 - [Handbook front door](../README.md) — evidence markers and scope
 - [03 · Content Recipes](../03-content-recipes/README.md) — the same recipes, verified
 - [07 · Community Patches](../07-community-patches/README.md) — what changed since these were written
-- [40 · The Construction Mod](../40-construction-mod/README.md) — where these techniques ended up
+- [58 · The Construction Mod](../58-construction-mod/README.md) — where these techniques ended up

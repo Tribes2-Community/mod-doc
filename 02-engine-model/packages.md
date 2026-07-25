@@ -56,7 +56,7 @@ Sierra shipped mods using both. Classic is largely file shadowing — it ships i
 
 **The exception worth knowing.** For a *total conversion* that owns the server, shadowing is the right
 call — you are replacing behaviour wholesale, not deltaing it, and composability buys nothing when nothing
-else is loaded. The [Construction mod](../40-construction-mod/what-it-changed.md#the-shadowing-strategy)
+else is loaded. The [Construction mod](../58-construction-mod/what-it-changed.md#the-shadowing-strategy)
 shadows 27 vanilla files and declares exactly one package across 128 files **[mod-script]**. It also pays
 the price: its derivatives are a fork tree rather than a stack of add-ons, because two shadowing mods
 cannot be combined.
@@ -319,8 +319,8 @@ your package appears **after** `console_client_patches` in the list — that is 
 
 - [Boot sequence](boot-sequence.md) — where to activate, and what exists when
 - [SimObjects and namespaces](simobject-and-namespaces.md) — what `Class::method` names resolve against
-- [25 · Evolution Admin Mod](../25-evolution-admin-mod/README.md) — a mod that **generates** its package at runtime, because packages cannot span files
-- [28 · TacoServer](../28-tacoserver/README.md) — the same problem solved the other way: one package per feature
+- [45 · Evolution Admin Mod](../45-evolution-admin-mod/README.md) — a mod that **generates** its package at runtime, because packages cannot span files
+- [48 · TacoServer](../48-tacoserver/README.md) — the same problem solved the other way: one package per feature
 - [Gametypes](../05-gameplay-systems/gametypes.md) — the auto-activated gametype package convention
 - [Your first mod](../01-getting-started/your-first-mod.md) — a package override end to end
 - [Modding against a patched install](../07-community-patches/modding-against-a-patched-install.md) — the collision surface

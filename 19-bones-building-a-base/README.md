@@ -21,7 +21,7 @@ Material marked **[bones]** is from NecroBones' tutorial at
 
 So power is **scoped by SimGroup membership**, not by distance. That is the opposite of the
 frequency-and-radius model Construction uses for deployables
-([Reusable mechanisms](../40-construction-mod/reusable-mechanisms.md#9-frequency-and-radius-linking)) —
+([Reusable mechanisms](../58-construction-mod/reusable-mechanisms.md#9-frequency-and-radius-linking)) —
 authored maps group things structurally, runtime-placed things must find each other spatially.
 
 It matches the vanilla implementation, which walks the group tree **[script]**:
@@ -218,4 +218,4 @@ These go in the dedicated observer SimGroup that
 - [20 · Environment and finishing](../20-bones-environment-finishing/README.md) — sky, fog, load screens, final checks
 - [13 · Terrain](../13-terrain/README.md) — Set Empty for terrain holes
 - [16 · Shipping a map](../16-shipping-a-map/README.md) — naming conventions and per-map gametype fields
-- [Reusable mechanisms](../40-construction-mod/reusable-mechanisms.md#9-frequency-and-radius-linking) — the runtime alternative to group-scoped power
+- [Reusable mechanisms](../58-construction-mod/reusable-mechanisms.md#9-frequency-and-radius-linking) — the runtime alternative to group-scoped power

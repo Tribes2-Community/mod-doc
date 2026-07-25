@@ -511,7 +511,7 @@ Register `max[AmmoCrateDeployable] = 1;` on the armors that may carry it, and ad
 ## Seeing the framework pushed hard
 
 The test system above was designed to be extended, and the
-[Construction mod](../40-construction-mod/building-systems.md#extending-the-deployable-tests) is the proof
+[Construction mod](../58-construction-mod/building-systems.md#extending-the-deployable-tests) is the proof
 that it scaled: it keeps every vanilla test and helper, adds `testInventoryTooClose`, `testTurretTooClose`,
 and `testSurfaceTooNarrow`, and layers per-deployable overrides in exactly the shipped style — across 35
 deployable types **[mod-script]**.
