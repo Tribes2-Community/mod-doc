@@ -319,6 +319,8 @@ your package appears **after** `console_client_patches` in the list — that is 
 
 - [Boot sequence](boot-sequence.md) — where to activate, and what exists when
 - [SimObjects and namespaces](simobject-and-namespaces.md) — what `Class::method` names resolve against
+- [25 · Evolution Admin Mod](../25-evolution-admin-mod/README.md) — a mod that **generates** its package at runtime, because packages cannot span files
+- [28 · TacoServer](../28-tacoserver/README.md) — the same problem solved the other way: one package per feature
 - [Gametypes](../05-gameplay-systems/gametypes.md) — the auto-activated gametype package convention
 - [Your first mod](../01-getting-started/your-first-mod.md) — a package override end to end
 - [Modding against a patched install](../07-community-patches/modding-against-a-patched-install.md) — the collision surface

@@ -79,14 +79,17 @@ flowchart TD
     BONES --> F
     F --> P["07 · Community Patches<br/>what TribesNEXT and RC2a<br/>change on top of all the above"]
     P --> S["08 · The Support Pack<br/>the community script library<br/>and module system"]
-    S --> M["40 · The Construction Mod<br/>a total conversion, studied:<br/>what it did and why"]
+    S --> CL["21–24 · Classic<br/>the ruleset that became the game,<br/>and its optional-rule system"]
+    CL --> EV["25–27 · Evolution Admin Mod<br/>generated packages, leased admin,<br/>and a ten-year-old bug"]
+    EV --> TS["28–30 · TacoServer<br/>the modern codebase:<br/>lineage, features, running it"]
+    TS --> M["40 · The Construction Mod<br/>a total conversion, studied:<br/>what it did and why"]
     M --> FK["41–48 · The Construction forks<br/>eight derivatives of 0.69a,<br/>compared against the base"]
     FK --> G["90 · Reference<br/>console functions, class tree,<br/>file formats, tutorial index"]
 ```
 
-Sections **07**, **08**, and **40–48** are context rather than instruction — what your users are running,
-what libraries exist, and how the largest server-side mod and its derivatives were built. Numbers between
-08 and 40 are left free for further studies.
+Sections **07**, **08**, **21–30** and **40–48** are context rather than instruction — what your users are
+running, what libraries exist, and how the mods that shaped the live game were built. Numbers between 30
+and 40 are left free for further studies.
 
 ### The three things that trip up every new Tribes 2 modder
 
@@ -200,6 +203,34 @@ NecroBones' community tutorial — the workflow, crashes and design judgement th
 | [The autoload system](08-support-pack/autoload-system.md) | `// #directive` headers, `autoload.ini`, dependency and version resolution |
 | [Callbacks and events](08-support-pack/callbacks-and-events.md) | `callback.cs` and `events.cs` — multi-listener events |
 | [Library reference](08-support-pack/library-reference.md) | All 36 modules |
+
+### 21–24 · [Classic](21-classic/README.md)
+The ruleset that became the game — shipped in your install, and still the base every live server runs.
+
+| Page | What it answers |
+|---|---|
+| [21 · Classic](21-classic/README.md) | What Classic is, why it exists, and the twenty-year lineage map |
+| [22 · Classic 1.1](22-classic-1-1/README.md) | The version in your 25034 install — gravity, launchers, the client pack |
+| [23 · Classic 1.5.2](23-classic-152/README.md) | The 2004-onward baseline: four releases, and what a modern server inherits |
+| [24 · The ruleset toggles](24-classic-ruleset-toggles/README.md) | `$Host::ClassicLoad*` — optional rules as a mechanism, and how to steal it |
+
+### 25–27 · [Evolution Admin Mod](25-evolution-admin-mod/README.md)
+An admin layer that generates its own TorqueScript package at runtime — and what that costs.
+
+| Page | What it answers |
+|---|---|
+| [25 · Architecture](25-evolution-admin-mod/README.md) | The `.ovl` split, the generated package, and its cache trap |
+| [26 · In operation](26-evolution-operation/README.md) | 89 prefs, the chat console, HTTP-loaded time-leased SuperAdmin |
+| [27 · teratos' evoClassic](27-teratos-evoclassic/README.md) | One line, ten years later — and the gotcha behind it |
+
+### 28–30 · [TacoServer](28-tacoserver/README.md)
+The modern codebase most public servers run today.
+
+| Page | What it answers |
+|---|---|
+| [28 · Lineage & architecture](28-tacoserver/README.md) | Overlay on 1.5.2, the `NoEvo` severance, one package per feature |
+| [29 · In operation](29-tacoserver-operation/README.md) | Population-scaled rules, ~180 prefs, installing and running it |
+| [30 · Running Classic today](30-running-classic-today/README.md) | **Which codebase to use in 2026**, and what the lineage teaches |
 
 ### 40 · [The Construction Mod](40-construction-mod/README.md)
 | Page | What it answers |

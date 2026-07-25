@@ -99,6 +99,30 @@
     - { title: "19 · Building a base",      url: /19-bones-building-a-base/ }
     - { title: "20 · Environment & finishing", url: /20-bones-environment-finishing/ }
 
+- num: "21"
+  title: Classic
+  url: /21-classic/
+  pages:
+    - { title: "22 · Classic 1.1",          url: /22-classic-1-1/ }
+    - { title: "23 · Classic 1.5.2",        url: /23-classic-152/ }
+    - { title: "24 · The ruleset toggles",  url: /24-classic-ruleset-toggles/ }
+
+- num: "25–27"
+  title: Evolution Admin Mod
+  url: /25-evolution-admin-mod/
+  pages:
+    - { title: "25 · Architecture",         url: /25-evolution-admin-mod/ }
+    - { title: "26 · In operation",         url: /26-evolution-operation/ }
+    - { title: "27 · teratos' evoClassic",  url: /27-teratos-evoclassic/ }
+
+- num: "28–30"
+  title: TacoServer
+  url: /28-tacoserver/
+  pages:
+    - { title: "28 · Lineage & architecture", url: /28-tacoserver/ }
+    - { title: "29 · In operation",         url: /29-tacoserver-operation/ }
+    - { title: "30 · Running Classic today", url: /30-running-classic-today/ }
+
 - num: "40"
   title: The Construction Mod
   url: /40-construction-mod/

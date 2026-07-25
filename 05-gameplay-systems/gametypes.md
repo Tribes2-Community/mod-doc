@@ -481,6 +481,8 @@ your gametype hooks connection directly rather than through `DefaultGame::`, rea
 
 - [Missions](missions.md) — the `.mis` side of the pairing
 - [Boot sequence](../02-engine-model/boot-sequence.md) — the mission load chain
+- [22 · Classic 1.1](../22-classic-1-1/README.md) — Defend and Destroy, a shipped gametype addition you can read end to end
+- [23 · Classic 1.5.2](../23-classic-152/README.md) — Spawn CTF, and the `ai<Type>.cs` companion in practice
 - [Packages](../02-engine-model/packages.md) — the auto-activation convention
 - [AI and bots](ai-bots.md) — the `ai<Type>.cs` companion file
 - [Modding against a patched install](../07-community-patches/modding-against-a-patched-install.md) — the collision surface
