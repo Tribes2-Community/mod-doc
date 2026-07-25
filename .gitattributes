@@ -1,0 +1,14 @@
+# Normalise to LF in the repository. GitHub Pages builds on Linux, and the
+# handbook is authored on Windows, so let Git handle the conversion.
+* text=auto eol=lf
+
+*.md   text eol=lf
+*.yml  text eol=lf
+*.html text eol=lf
+*.scss text eol=lf
+*.js   text eol=lf
+
+*.png  binary
+*.jpg  binary
+*.gif  binary
+*.ico  binary

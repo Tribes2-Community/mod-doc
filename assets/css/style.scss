@@ -1,0 +1,441 @@
+---
+# Front matter required so Jekyll processes this file.
+---
+
+// ===========================================================================
+//  Tribes 2 Mod Development Handbook — theme
+//
+//  Every colour below is lifted from the shipped game files, not invented.
+//  Provenance is noted per value so it can be re-derived:
+//
+//    gui/guiProfiles.cs   — the shell UI profile set (counts = uses in file)
+//    gui/PlayGui.gui      — the in-game HUD
+//    console_start.cs     — the pre-boot login/EULA profiles
+//    scripts/*.cs         — sensorColor values used for target rendering
+// ===========================================================================
+
+// --- Core UI, from gui/guiProfiles.cs --------------------------------------
+$t2-cyan:        #42dbea;   // "66 219 234"  primary shell text        (×11)
+$t2-teal-bright: #06f5d7;   // "6 245 215"   highlight text            (×9)
+$t2-teal:        #46ebc8;   // "70 235 200"  secondary teal            (×4)
+$t2-teal-mid:    #3cb4b4;   // "60 180 180"  muted teal                (×9)
+$t2-teal-dark:   #3c8c8c;   // "60 140 140"  dim teal                  (×4)
+$t2-pale-blue:   #a9d7fa;   // "169 215 250" pale blue body text       (×7)
+$t2-green-deep:  #194438;   // "25 68 56"    selected / highlight fill (×19)
+$t2-fill-hl:     #32e9ce;   // "50 233 206"  fillColorHL
+$t2-grey:        #808080;   // "128 128 128" fontColorNA (disabled)
+$t2-near-black:  #050505;   // "5 5 5"       fontColorNA on light chrome
+$t2-ink:         #081306;   // "8 19 6"      button text on light bitmaps
+
+// --- HUD, from gui/PlayGui.gui ---------------------------------------------
+// The signature Tribes 2 look: translucent dark panel, 1px pure-green frame.
+$hud-frame:      #00ff00;   // frameColor "0 1 0 1"                    (×94)
+$hud-fill:       rgba(64, 64, 64, 0.25); // fillColor "0.25 …"         (×90)
+
+// --- Panel tints, from gui/*.gui fillColor ---------------------------------
+$t2-panel-blue:  rgba(0, 64, 100, 0.31);  // "0 64 100 80"
+$t2-panel-green: rgba(0, 64, 0, 0.31);    // "0 64 0 80"
+$t2-scrim:       rgba(0, 0, 0, 0.63);     // "0 0 0 160" dialog backdrop
+
+// --- Target/sensor accents, from scripts/*.cs sensorColor ------------------
+$sensor-green:   #00d42d;   // "0 212 45"    turret base
+$sensor-amber:   #ffc209;   // "255 194 9"   Shrike
+$sensor-blue:    #0988ff;   // "9 136 255"
+$sensor-magenta: #bf00e2;   // "191 0 226"
+
+// --- Derived surfaces -------------------------------------------------------
+$bg:             #04090a;   // near-black with the palette's green-blue cast
+$bg-raised:      #071214;
+$surface:        #0a1a1f;
+$surface-code:   #071a22;   // $t2-panel-blue flattened onto $bg
+$rule:           rgba(0, 255, 0, 0.22);   // HUD frame, dialled back
+$rule-strong:    rgba(0, 255, 0, 0.45);
+
+$sidebar-w: 19rem;
+$content-max: 54rem;
+
+// --- Type -------------------------------------------------------------------
+// Tribes 2 ships Univers (body) and Sui Generis (display). Neither is
+// redistributable, so these are system stacks chosen to sit in the same
+// register: condensed geometric for display, humanist for body.
+$font-display: "Eurostile", "Bank Gothic", "Michroma", "Agency FB",
+               "Franklin Gothic Medium", "Oswald", "Roboto Condensed",
+               "Segoe UI Semibold", system-ui, sans-serif;
+$font-body:    "Univers", "Segoe UI", -apple-system, BlinkMacSystemFont,
+               "Helvetica Neue", Arial, sans-serif;
+$font-mono:    "Cascadia Code", "JetBrains Mono", "Fira Code", Consolas,
+               "SFMono-Regular", ui-monospace, monospace;
+
+// ===========================================================================
+//  Reset / base
+// ===========================================================================
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: $bg;
+  background-image:
+    radial-gradient(ellipse at 15% -10%, rgba(0, 64, 100, 0.18), transparent 55%),
+    radial-gradient(ellipse at 85% 0%,  rgba(0, 64, 0, 0.12),   transparent 50%);
+  background-attachment: fixed;
+  color: $t2-pale-blue;
+  font-family: $font-body;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: $t2-green-deep; color: $t2-teal-bright; }
+
+// ===========================================================================
+//  Shell
+// ===========================================================================
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 1.25rem;
+  background: rgba(4, 9, 10, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid $rule;
+
+  .brand {
+    font-family: $font-display;
+    font-size: 0.95rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: $t2-teal-bright;
+    text-decoration: none;
+    white-space: nowrap;
+
+    .brand-sub {
+      color: $t2-teal-dark;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  .masthead-spacer { flex: 1; }
+
+  .masthead-link {
+    font-family: $font-display;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $t2-teal-mid;
+    text-decoration: none;
+    border: 1px solid $rule;
+    padding: 0.3rem 0.7rem;
+
+    &:hover { color: $t2-teal-bright; border-color: $rule-strong; }
+  }
+}
+
+.nav-toggle {
+  display: none;
+  font-family: $font-display;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: transparent;
+  color: $t2-cyan;
+  border: 1px solid $rule;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+}
+
+.shell {
+  display: flex;
+  align-items: flex-start;
+  max-width: 88rem;
+  margin: 0 auto;
+}
+
+// ===========================================================================
+//  Sidebar
+// ===========================================================================
+.sidebar {
+  position: sticky;
+  top: 3.1rem;
+  flex: 0 0 $sidebar-w;
+  width: $sidebar-w;
+  max-height: calc(100vh - 3.1rem);
+  overflow-y: auto;
+  padding: 1.5rem 1rem 4rem 1.25rem;
+  border-right: 1px solid $rule;
+  font-size: 0.86rem;
+
+  scrollbar-width: thin;
+  scrollbar-color: $t2-teal-dark transparent;
+  &::-webkit-scrollbar { width: 8px; }
+  &::-webkit-scrollbar-thumb { background: rgba(60, 140, 140, 0.5); }
+
+  .nav-section { margin-bottom: 1.35rem; }
+
+  .nav-section-title {
+    display: block;
+    font-family: $font-display;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $t2-teal-bright;
+    text-decoration: none;
+    padding-bottom: 0.35rem;
+    margin-bottom: 0.4rem;
+    border-bottom: 1px solid $rule;
+
+    .nav-num { color: $sensor-amber; margin-right: 0.45rem; }
+    &:hover { color: #fff; }
+  }
+
+  ul { list-style: none; margin: 0; padding: 0; }
+
+  li a {
+    display: block;
+    padding: 0.2rem 0.5rem 0.2rem 0.75rem;
+    color: $t2-teal-mid;
+    text-decoration: none;
+    border-left: 2px solid transparent;
+
+    &:hover { color: $t2-cyan; border-left-color: $rule-strong; }
+    &.current {
+      color: $t2-teal-bright;
+      background: $t2-panel-green;
+      border-left-color: $hud-frame;
+    }
+  }
+}
+
+// ===========================================================================
+//  Content
+// ===========================================================================
+.content {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 2rem 2.5rem 6rem;
+}
+
+.page { max-width: $content-max; }
+
+// --- Headings ---------------------------------------------------------------
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-display;
+  font-weight: 600;
+  line-height: 1.25;
+  color: $t2-teal-bright;
+  margin: 2.2rem 0 0.9rem;
+  letter-spacing: 0.03em;
+}
+
+h1 {
+  font-size: 1.9rem;
+  margin-top: 0.4rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid $rule-strong;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.35rem;
+  color: $t2-cyan;
+  padding-left: 0.75rem;
+  border-left: 3px solid $hud-frame;
+}
+
+h3 { font-size: 1.08rem; color: $t2-teal; }
+h4 { font-size: 0.97rem; color: $t2-teal-mid; text-transform: uppercase; letter-spacing: 0.08em; }
+
+// --- Text -------------------------------------------------------------------
+p, li { color: $t2-pale-blue; }
+
+a {
+  color: $t2-cyan;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(66, 219, 234, 0.35);
+
+  &:hover { color: $t2-teal-bright; border-bottom-color: $t2-teal-bright; }
+}
+
+strong { color: #dff3f7; font-weight: 600; }
+em { color: $t2-teal; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, $rule-strong, transparent);
+  margin: 2.5rem 0;
+}
+
+// --- Evidence markers -------------------------------------------------------
+// Tagged by assets/js/handbook.js. Colours are the game's sensorColor values,
+// which is what the engine uses to distinguish target classes on the HUD.
+.marker {
+  font-family: $font-mono;
+  font-size: 0.78em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.05em 0.45em;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+
+  &.m-binary        { color: $sensor-amber; }
+  &.m-script        { color: $sensor-green; }
+  &.m-patch-script  { color: $sensor-blue; }
+  &.m-support-script{ color: $sensor-magenta; }
+  &.m-mod-script    { color: $t2-teal-bright; }
+  &.m-community     { color: $t2-grey; }
+  &.m-inferred      { color: $t2-teal-dark; }
+}
+
+// --- Code -------------------------------------------------------------------
+code {
+  font-family: $font-mono;
+  font-size: 0.88em;
+  color: $t2-teal;
+  background: rgba(0, 64, 100, 0.28);
+  padding: 0.1em 0.36em;
+  border: 1px solid rgba(0, 255, 0, 0.12);
+}
+
+pre {
+  background: $surface-code;
+  border: 1px solid $rule;
+  border-left: 3px solid $hud-frame;
+  padding: 1rem 1.15rem;
+  overflow-x: auto;
+  line-height: 1.5;
+  font-size: 0.87rem;
+
+  code {
+    background: none;
+    border: 0;
+    padding: 0;
+    color: $t2-pale-blue;
+  }
+}
+
+// Rouge — tuned to the palette rather than a stock theme
+.highlight {
+  .c, .cm, .c1, .cs { color: #4f7d78; font-style: italic; }  // comments
+  .k, .kd, .kn, .kp, .kr, .kt { color: $t2-teal-bright; }    // keywords
+  .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx { color: $sensor-amber; }
+  .m, .mf, .mh, .mi, .mo, .il { color: $t2-fill-hl; }        // numbers
+  .nv, .vg, .vi, .vc { color: $sensor-green; }               // $variables
+  .nf, .na { color: $t2-cyan; }                              // functions
+  .o, .ow { color: #7fd6d6; }                                // operators
+  .p { color: #6f9ea8; }                                     // punctuation
+  .err { color: #ff5f5f; background: none; }
+}
+
+// --- Tables -----------------------------------------------------------------
+.table-wrap { overflow-x: auto; margin: 1.25rem 0; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9rem;
+  border: 1px solid $rule;
+
+  th {
+    font-family: $font-display;
+    font-size: 0.76rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: left;
+    color: $t2-teal-bright;
+    background: $t2-green-deep;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid $rule;
+  }
+
+  td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgba(0, 255, 0, 0.12);
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) td { background: rgba(0, 64, 100, 0.10); }
+  tr:hover td { background: rgba(0, 64, 0, 0.18); }
+}
+
+// --- Blockquotes ------------------------------------------------------------
+blockquote {
+  margin: 1.4rem 0;
+  padding: 0.75rem 1.15rem;
+  background: $t2-panel-blue;
+  border-left: 3px solid $sensor-amber;
+  color: #c3e0e8;
+
+  p:first-child { margin-top: 0; }
+  p:last-child { margin-bottom: 0; }
+
+  code { background: rgba(0, 0, 0, 0.35); }
+}
+
+// --- Mermaid ----------------------------------------------------------------
+.mermaid {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: $t2-scrim;
+  border: 1px solid $rule;
+  overflow-x: auto;
+  text-align: center;
+
+  &:not([data-processed]) { visibility: hidden; }
+}
+
+// --- Page footer ------------------------------------------------------------
+.page-nav {
+  margin-top: 3.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid $rule;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: $font-display;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  a { border-bottom: 0; }
+}
+
+.site-footer {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid $rule;
+  color: $t2-teal-dark;
+  font-size: 0.8rem;
+
+  a { color: $t2-teal-mid; border-bottom: 0; }
+  a:hover { color: $t2-teal-bright; }
+}
+
+// ===========================================================================
+//  Responsive
+// ===========================================================================
+@media (max-width: 62rem) {
+  .nav-toggle { display: inline-block; }
+
+  .shell { display: block; }
+
+  .sidebar {
+    display: none;
+    position: static;
+    width: auto;
+    max-height: none;
+    border-right: 0;
+    border-bottom: 1px solid $rule;
+  }
+  .sidebar.open { display: block; }
+
+  .content { padding: 1.5rem 1.15rem 4rem; }
+
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.2rem; }
+}

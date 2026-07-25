@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+{% include head.html %}
+<body>
+
+  <header class="masthead">
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="sidebar">Contents</button>
+    <a class="brand" href="{{ '/' | relative_url }}">
+      Tribes&nbsp;2 <span class="brand-sub">// Mod Development Handbook</span>
+    </a>
+    <span class="masthead-spacer"></span>
+    <a class="masthead-link" href="https://github.com/{{ site.repository }}">GitHub</a>
+  </header>
+
+  <div class="shell">
+    {% include sidebar.html %}
+
+    <main class="content">
+      <article class="page">
+        {{ content }}
+      </article>
+
+      {% include footer.html %}
+    </main>
+  </div>
+
+  <script src="{{ '/assets/js/handbook.js' | relative_url }}"></script>
+</body>
+</html>

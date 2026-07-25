@@ -1,0 +1,63 @@
+title: Tribes 2 Mod Development Handbook
+description: >-
+  Writing mods against vanilla Tribes 2, patched build 25034 — the V12 engine,
+  the community patches, and the Construction mod family.
+lang: en-GB
+
+# GitHub Pages project site
+url: https://geekofwires.github.io
+baseurl: /tribes2-mod-doc
+repository: GeekOfWires/tribes2-mod-doc
+
+# Rendering ------------------------------------------------------------------
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+  toc_levels: 2..3
+
+# Plugins — every one of these is on the GitHub Pages allow-list, so the site
+# builds on Pages without a custom action.
+plugins:
+  - jekyll-optional-front-matter   # render .md files that have no front matter
+  - jekyll-readme-index            # README.md becomes each directory's index
+  - jekyll-relative-links          # rewrite ./foo.md links to built page URLs
+  - jekyll-titles-from-headings    # page title comes from the leading H1
+  - jekyll-sitemap
+
+optional_front_matter:
+  remove_originals: true
+
+readme_index:
+  with_frontmatter: true
+  remove_originals: true
+
+relative_links:
+  enabled: true
+  collections: false
+
+titles_from_headings:
+  enabled: true
+  strip_title: false   # keep the H1 visible in the page body
+  collections: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Housekeeping ---------------------------------------------------------------
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - .jekyll-cache
+  - .jekyll-metadata
+  - CONTRIBUTING.md   # repo-facing; GitHub renders it on the repo page

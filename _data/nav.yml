@@ -1,0 +1,113 @@
+# Sidebar navigation. Paths are relative to the site root and are resolved
+# against site.baseurl in _includes/sidebar.html.
+
+- num: "01"
+  title: Getting Started
+  url: /01-getting-started/
+  pages:
+    - { title: "Install anatomy",        url: /01-getting-started/install-anatomy }
+    - { title: "What you need",          url: /01-getting-started/what-you-need }
+    - { title: "Your first mod",         url: /01-getting-started/your-first-mod }
+    - { title: "Launch options",         url: /01-getting-started/launch-options }
+
+- num: "02"
+  title: Engine Model
+  url: /02-engine-model/
+  pages:
+    - { title: "Mod paths and overrides", url: /02-engine-model/mod-paths-and-overrides }
+    - { title: "Boot sequence",           url: /02-engine-model/boot-sequence }
+    - { title: "TorqueScript",            url: /02-engine-model/torquescript }
+    - { title: "SimObjects and namespaces", url: /02-engine-model/simobject-and-namespaces }
+    - { title: "Datablocks",              url: /02-engine-model/datablocks }
+    - { title: "Packages",                url: /02-engine-model/packages }
+    - { title: "Client/server split",     url: /02-engine-model/client-server-split }
+    - { title: "Scheduling and events",   url: /02-engine-model/scheduling-and-events }
+
+- num: "03"
+  title: Content Recipes
+  url: /03-content-recipes/
+  pages:
+    - { title: "Weapons",                 url: /03-content-recipes/weapons }
+    - { title: "Projectiles",             url: /03-content-recipes/projectiles }
+    - { title: "Ammo and inventory",      url: /03-content-recipes/ammo-and-inventory }
+    - { title: "Packs",                   url: /03-content-recipes/packs }
+    - { title: "Grenades and hand inventory", url: /03-content-recipes/grenades-and-hand-inventory }
+    - { title: "Armors",                  url: /03-content-recipes/armors }
+    - { title: "Vehicles",                url: /03-content-recipes/vehicles }
+    - { title: "Turrets and deployables", url: /03-content-recipes/turrets-and-deployables }
+    - { title: "Particles and effects",   url: /03-content-recipes/particles-explosions-effects }
+    - { title: "Damage and type masks",   url: /03-content-recipes/damage-and-typemasks }
+    - { title: "Audio",                   url: /03-content-recipes/audio }
+
+- num: "04"
+  title: Interface
+  url: /04-interface/
+  pages:
+    - { title: "GUI system",              url: /04-interface/gui-system }
+    - { title: "HUD",                     url: /04-interface/hud }
+    - { title: "Text and messaging",      url: /04-interface/text-and-messaging }
+
+- num: "05"
+  title: Gameplay Systems
+  url: /05-gameplay-systems/
+  pages:
+    - { title: "Gametypes",               url: /05-gameplay-systems/gametypes }
+    - { title: "Missions",                url: /05-gameplay-systems/missions }
+    - { title: "AI and bots",             url: /05-gameplay-systems/ai-bots }
+
+- num: "06"
+  title: Shipping
+  url: /06-shipping/
+  pages:
+    - { title: "Packaging",               url: /06-shipping/packaging }
+    - { title: "Hosting and testing",     url: /06-shipping/hosting-and-testing }
+    - { title: "Debugging",               url: /06-shipping/debugging }
+
+- num: "07"
+  title: Community Patches
+  url: /07-community-patches/
+  pages:
+    - { title: "TribesNEXT QoL patch",    url: /07-community-patches/tribesnext-qol }
+    - { title: "RC2a",                    url: /07-community-patches/rc2a }
+    - { title: "Modding a patched install", url: /07-community-patches/modding-against-a-patched-install }
+
+- num: "08"
+  title: The Support Pack
+  url: /08-support-pack/
+  pages:
+    - { title: "The autoload system",     url: /08-support-pack/autoload-system }
+    - { title: "Callbacks and events",    url: /08-support-pack/callbacks-and-events }
+    - { title: "Library reference",       url: /08-support-pack/library-reference }
+
+- num: "40"
+  title: The Construction Mod
+  url: /40-construction-mod/
+  pages:
+    - { title: "What it changed",         url: /40-construction-mod/what-it-changed }
+    - { title: "Building systems",        url: /40-construction-mod/building-systems }
+    - { title: "Playing Construction",    url: /40-construction-mod/playing }
+    - { title: "Reusable mechanisms",     url: /40-construction-mod/reusable-mechanisms }
+
+- num: "41–48"
+  title: Construction Forks
+  url: /41-metallic-construction/
+  pages:
+    - { title: "41 · Metallic Construction 1.4", url: /41-metallic-construction/ }
+    - { title: "42 · MooCon",             url: /42-moocon/ }
+    - { title: "43 · CCM",                url: /43-ccm/ }
+    - { title: "44 · Power Edition",      url: /44-power-edition/ }
+    - { title: "45 · QuantiumX",          url: /45-quantiumx/ }
+    - { title: "46 · TCCM",               url: /46-tccm/ }
+    - { title: "47 · Ultimate Build 2.0", url: /47-ultimate-build/ }
+    - { title: "48 · c2kconstruction",    url: /48-c2k-construction/ }
+
+- num: "90"
+  title: Reference
+  url: /90-reference/
+  pages:
+    - { title: "Console functions",       url: /90-reference/console-functions }
+    - { title: "Datablock classes",       url: /90-reference/datablock-classes }
+    - { title: "Class hierarchy",         url: /90-reference/class-hierarchy }
+    - { title: "File formats",            url: /90-reference/file-formats }
+    - { title: "Global variables",        url: /90-reference/global-variables }
+    - { title: "Source tutorial index",   url: /90-reference/source-tutorial-index }

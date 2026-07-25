@@ -1,0 +1,37 @@
+{%- comment -%}
+  page.url arrives as "/02-engine-model/packages.html" or "/02-engine-model/".
+  _data/nav.yml writes URLs without the .html extension. Normalise both sides
+  to a trailing-slash form so either shape matches.
+
+  Only Liquid 4 filters are used here — GitHub Pages pins Jekyll 3.9, which
+  predates `remove_last`.
+{%- endcomment -%}
+{%- assign here = page.url | remove: 'index.html' | remove: '.html' | append: '/' | replace: '//', '/' -%}
+
+<nav class="sidebar" id="sidebar" aria-label="Handbook contents">
+
+  <div class="nav-section">
+    <a class="nav-section-title{% if here == '/' %} current{% endif %}"
+       href="{{ '/' | relative_url }}">Front door</a>
+  </div>
+
+  {%- for section in site.data.nav %}
+  {%- assign sec_norm = section.url | append: '/' | replace: '//', '/' -%}
+  <div class="nav-section">
+    <a class="nav-section-title{% if here == sec_norm %} current{% endif %}"
+       href="{{ section.url | relative_url }}">
+      <span class="nav-num">{{ section.num }}</span>{{ section.title }}
+    </a>
+    <ul>
+      {%- for p in section.pages %}
+      {%- assign p_norm = p.url | append: '/' | replace: '//', '/' -%}
+      <li>
+        <a href="{{ p.url | relative_url }}"
+           class="{% if here == p_norm %}current{% endif %}">{{ p.title }}</a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- endfor %}
+
+</nav>
