@@ -1,8 +1,9 @@
 # Source tutorial index
 
-This handbook draws on the surviving community modding tutorials, preserved at
-[`../../T2ModTutorialDatabase/`](../../T2ModTutorialDatabase/). They were written in 2002–2003, mostly by
-players, and they are the origin of most practical Tribes 2 modding knowledge.
+This handbook draws on the surviving community modding tutorials, preserved in a `T2ModTutorialDatabase/`
+corpus that sits alongside this repository in the authoring workspace — **it is not included here**, and
+the paths below are provenance rather than links. They were written in 2002–2003, mostly by players, and
+they are the origin of most practical Tribes 2 modding knowledge.
 
 They also contain guesses, errors, and recipes that circulated unverified for twenty years. Where this
 handbook and a tutorial disagree, this handbook follows the shipped V12 scripts and says so.

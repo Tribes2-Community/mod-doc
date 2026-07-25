@@ -60,28 +60,37 @@ Sections are numbered so material can be inserted without renumbering:
 bundle exec jekyll build --strict_front_matter
 ```
 
-and verify that every relative link still resolves:
+and verify the handbook is still self-contained:
 
 ```bash
-python - <<'EOF'
-import os, re
-bad = 0
-for root, _, files in os.walk('.'):
-    if any(p in root for p in ('_site', '.git', 'vendor')): continue
-    for f in files:
-        if not f.endswith('.md'): continue
-        p = os.path.join(root, f)
-        s = open(p, encoding='utf-8').read()
-        if s.count('```') % 2: print('unbalanced fences:', p); bad += 1
-        for m in re.finditer(r'\]\(([^)]+)\)', s):
-            t = m.group(1)
-            if t.startswith(('http', '#', 'mailto')): continue
-            path = t.split('#')[0]
-            if path and not os.path.exists(os.path.normpath(os.path.join(root, path))):
-                print('broken link:', p, '->', t); bad += 1
-print('problems:', bad)
-EOF
+python script/check-links.py
 ```
+
+It exits non-zero on any of:
+
+| Problem | Why it matters |
+|---|---|
+| **escape** | A relative link resolving *outside* the repository |
+| **missing** | A relative link to a file that is not here |
+| **absolute** | A root-absolute path — ignores `site.baseurl`, so it breaks on GitHub Pages |
+| **localhost** | A hardcoded development URL |
+
+The **escape** check is the one that is easy to get wrong. A naive
+`os.path.exists()` test passes for `../T2ModTutorialDatabase/` whenever that
+directory happens to exist next to the repository in someone's workspace — and
+then 404s the moment the site is served, because **the site root is this folder,
+not its parent.** Source material that lives outside the repository is cited as
+plain text, never linked.
+
+## This repository must stay self-contained
+
+Everything the published site needs is inside this folder. Nothing links to a
+sibling directory, an absolute filesystem path, or a development server.
+
+Source material that is *not* here — the tutorial corpus, the project's reverse
+engineering notes, extracted game data — is referenced by name in prose or in a
+provenance table, so a claim can be traced without the site depending on it.
+Cite it; do not link it.
 
 ## Scope
 

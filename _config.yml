@@ -61,3 +61,4 @@ exclude:
   - .jekyll-cache
   - .jekyll-metadata
   - CONTRIBUTING.md   # repo-facing; GitHub renders it on the repo page
+  - script            # repo tooling; not part of the published site

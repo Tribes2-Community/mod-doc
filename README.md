@@ -275,8 +275,11 @@ Each derives from **Construction 0.69a**. The percentage is how much of that bas
 | Shipped V12 GUI | `base/scripts.vl2` `gui/` (136 files) | Primary |
 | Classic mod scripts | `GameData/Classic/scripts/` | Primary — a real, complete mod to read |
 | `Tribes2.exe` | `GameData/Tribes2.exe` | Primary — string and disassembly evidence |
-| Community tutorials | [`../T2ModTutorialDatabase/`](../T2ModTutorialDatabase/) | Secondary — see [tutorial index](90-reference/source-tutorial-index.md) |
-| Project RE notes | [`../docs/`](../docs/) | Secondary — deeper binary analysis |
+| Community tutorials | `T2ModTutorialDatabase/` † | Secondary — see [tutorial index](90-reference/source-tutorial-index.md) |
+| Project RE notes | `docs/` † | Secondary — deeper binary analysis |
+
+† Not included in this repository. These sit alongside it in the authoring workspace; the paths are
+recorded so claims can be traced back to their source, not so they can be clicked.
 
 The community tutorial corpus is the origin of a great deal of practical Tribes 2 modding knowledge, and
 this handbook preserves its recipes. It also contains guesses and errors that circulated for twenty years;
