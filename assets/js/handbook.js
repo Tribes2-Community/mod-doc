@@ -29,7 +29,7 @@
      can colour them using the game's own sensorColor values.               */
   var KNOWN = {
     "binary": 1, "script": 1, "patch-script": 1, "support-script": 1,
-    "mod-script": 1, "community": 1, "inferred": 1
+    "mod-script": 1, "community": 1, "inferred": 1, "dso-verified": 1
   };
   Array.prototype.forEach.call(document.querySelectorAll("article strong"), function (el) {
     var m = /^\[([a-z-]+)\]$/.exec(el.textContent.trim());

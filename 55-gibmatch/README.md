@@ -43,4 +43,4 @@ mechanic, not the mechanic's implementation.
 - [54 · Masters mod](../54-mastersmod/README.md) — another compiled-only combat mod in this section
 - [30 · Team Rabbit 2](../30-team-rabbit-2/README.md) — a fully-documented example of a randomised bonus system, for comparison
 - [Gametypes](../05-gameplay-systems/gametypes.md) — the `scripts/*Game.cs` convention GibMatch's four modes follow
-- [TorqueScript — V12 Decompiler](../02-engine-model/torquescript-decompiler.md) — the format GibMatch's `.dso` gametypes are written in
+- [TorqueScript — V12 Compiler](../02-engine-model/torquescript-compiler.md) — the format GibMatch's `.dso` gametypes are written in

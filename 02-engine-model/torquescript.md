@@ -342,7 +342,8 @@ fatal — but guard anyway if you support both.
 
 ## Related
 
-- [TorqueScript — V12 Decompiler](torquescript-decompiler.md) — what this language looks like compiled, and how to read it back
+- [TorqueScript — V12 Compiler](torquescript-compiler.md) — what this language looks like compiled to `.cs.dso`
+- [TorqueScript — V12 Decompiler](torquescript-decompiler.md) — reading a `.cs.dso` back to source, with a client-side tool
 - [SimObjects and namespaces](simobject-and-namespaces.md) — how `Class::method` dispatch resolves
 - [Datablocks](datablocks.md) — the `datablock` declaration in depth
 - [Packages](packages.md) — `package` and `Parent::`

@@ -31,7 +31,7 @@ Every non-obvious claim carries one of these:
 | Marker | Meaning |
 |---|---|
 | **[binary]** | Confirmed by disassembly or string analysis of `Tribes2.exe`, or of a patch DLL |
-| **[engine-source]** | Confirmed by reading the V12 engine's own archived C++ source — file and line cited |
+| **[dso-verified]** | Confirmed empirically — parsed/executed against real `.cs.dso` files and checked against known `.cs` source |
 | **[script]** | Confirmed by reading the shipped V12 `.cs` in `base/scripts.vl2` — file and line cited |
 | **[patch-script]** | Confirmed by reading a community patch's own shipped `.cs` |
 | **[support-script]** | Confirmed by reading the community support pack's own shipped `.cs` |
@@ -133,7 +133,8 @@ Read these before anything else — they explain most "why doesn't my change tak
 | [Mod paths and overrides](02-engine-model/mod-paths-and-overrides.md) | How the engine finds a file, and how you shadow one |
 | [Boot sequence](02-engine-model/boot-sequence.md) | What executes when, from `console_start.cs` to the main menu |
 | [TorqueScript](02-engine-model/torquescript.md) | The language: syntax, types, variables, operators, gotchas |
-| [TorqueScript — V12 Decompiler](02-engine-model/torquescript-decompiler.md) | The `.cs.dso` binary format, all 84 opcodes, and a byte-level worked example |
+| [TorqueScript — V12 Compiler](02-engine-model/torquescript-compiler.md) | The `.cs.dso` binary format, all 84 opcodes, and the compiler's codegen shapes |
+| [TorqueScript — V12 Decompiler](02-engine-model/torquescript-decompiler.md) | Reading `.cs.dso` back to `.cs`, including a client-side decompiler tool |
 | [SimObjects and namespaces](02-engine-model/simobject-and-namespaces.md) | Object model, method dispatch, `SimGroup`/`SimSet` |
 | [Datablocks](02-engine-model/datablocks.md) | What a datablock is, how it ghosts, how inheritance works |
 | [Packages](02-engine-model/packages.md) | The override mechanism — the single most important modding tool |

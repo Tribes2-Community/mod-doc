@@ -48,8 +48,10 @@ mode **[script]**.
 own launchers delete them all before every run **[script]**. See
 [Packaging](../06-shipping/packaging.md#dso-compilation).
 
-For the format itself — header, string/float tables, the full opcode set, and a byte-level worked
-example — see [TorqueScript — V12 Decompiler](../02-engine-model/torquescript-decompiler.md).
+For the format itself — header, string/float tables, and the full opcode set — see
+[TorqueScript — V12 Compiler](../02-engine-model/torquescript-compiler.md). For reading a `.dso` back to
+`.cs`, including a byte-level worked example and a client-side decompiler tool, see
+[TorqueScript — V12 Decompiler](../02-engine-model/torquescript-decompiler.md).
 
 ### `.gui` — GUI definition
 

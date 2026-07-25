@@ -52,6 +52,7 @@ The moment you add one new model, every client needs a download.
 The engine compiles `.cs` to `.cs.dso` on first load and prefers the compiled form afterwards
 **[binary]** — the relevant strings are `%s.dso`, `Compiling %s...`, and `Loading compiled script %s.`
 That compiled form is a real, documented binary format — see
+[TorqueScript — V12 Compiler](../02-engine-model/torquescript-compiler.md) for the format itself, or
 [TorqueScript — V12 Decompiler](../02-engine-model/torquescript-decompiler.md) if you need to read one
 back without its source.
 
@@ -326,7 +327,7 @@ it and refuses to load otherwise **[patch-script]**. The guard recommended below
 ## Related
 
 - [Mod paths and overrides](../02-engine-model/mod-paths-and-overrides.md) — how your files get found
-- [TorqueScript — V12 Decompiler](../02-engine-model/torquescript-decompiler.md) — the `.cs.dso` binary format itself
+- [TorqueScript — V12 Compiler](../02-engine-model/torquescript-compiler.md) — the `.cs.dso` binary format itself
 - [Hosting and testing](hosting-and-testing.md) — testing before release
 - [Launch options](../01-getting-started/launch-options.md) — `-prepbuild` and the rest
 - [File formats](../reference/file-formats.md) — `.vl2` and `.dso`

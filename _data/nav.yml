@@ -17,6 +17,7 @@
     - { title: "Mod paths and overrides", url: /02-engine-model/mod-paths-and-overrides }
     - { title: "Boot sequence",           url: /02-engine-model/boot-sequence }
     - { title: "TorqueScript",            url: /02-engine-model/torquescript }
+    - { title: "TorqueScript — V12 Compiler", url: /02-engine-model/torquescript-compiler }
     - { title: "TorqueScript — V12 Decompiler", url: /02-engine-model/torquescript-decompiler }
     - { title: "SimObjects and namespaces", url: /02-engine-model/simobject-and-namespaces }
     - { title: "Datablocks",              url: /02-engine-model/datablocks }
