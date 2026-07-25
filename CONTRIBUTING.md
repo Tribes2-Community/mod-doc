@@ -14,6 +14,7 @@ Every non-obvious statement carries a marker:
 | `**[patch-script]**` | Confirmed by reading a community patch's own shipped `.cs` |
 | `**[support-script]**` | Confirmed by reading the community support pack's own shipped `.cs` |
 | `**[mod-script]**` | Confirmed by reading a documented community mod's own files |
+| `**[bones]**` | From NecroBones' Tribes 2 Mapping Tutorial — attributed community practice |
 | `**[community]**` | From the 2002–2003 tutorial corpus; widely relied on, not independently confirmed |
 | `**[inferred]**` | Reasoned from the above; plausible but unverified |
 
@@ -93,3 +94,14 @@ cryptography — those belong to their authors.
 
 **No game assets.** This repository ships documentation only. Quote code as
 evidence; do not vendor archives, binaries, models, textures or audio.
+
+## Third-party images
+
+`assets/img/necrobones/` mirrors screenshots and map images from NecroBones'
+mapping tutorial, because community Tribes 2 hosting has repeatedly proven
+fragile and the material is worth preserving. Every page using them attributes
+the author and links the original.
+
+If you add third-party images, follow the same rules: attribute on the page,
+link the source, keep them in a clearly-named subdirectory, and be prepared to
+remove them at the author's request.

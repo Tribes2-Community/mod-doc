@@ -250,6 +250,11 @@ Tribes2.exe -light <MissionName>
 All three set `$Host::Dedicated = true`, enable the Windows console, and call `CreateServer()` directly
 **[script]**. See [Launch options](../01-getting-started/launch-options.md).
 
+> **Making maps has its own sections.** This page covers the `.mis` as a **data file a mod reads**. For
+> authoring one — the editor, terrain generation, texturing, lighting, navigation graphs and packaging —
+> see [10–16 · Mapping](../10-mapping/README.md), and
+> [17–20 · Bones' Mapping Tutorial](../17-bones-getting-started/README.md) for community practice.
+
 ## The in-game mission editor
 
 Tribes 2 ships a full editor. `scripts/editor.cs`, `editorGui.cs`, `editorRender.cs`, `editorProfiles.cs`,

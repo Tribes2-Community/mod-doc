@@ -79,6 +79,26 @@
     - { title: "Callbacks and events",    url: /08-support-pack/callbacks-and-events }
     - { title: "Library reference",       url: /08-support-pack/library-reference }
 
+- num: "10"
+  title: Mapping
+  url: /10-mapping/
+  pages:
+    - { title: "11 · The Mission Editor",   url: /11-mission-editor/ }
+    - { title: "12 · World Editor",         url: /12-world-editor/ }
+    - { title: "13 · Terrain",              url: /13-terrain/ }
+    - { title: "14 · Terrain texturing",    url: /14-terrain-texturing/ }
+    - { title: "15 · Lighting, nav & spawn", url: /15-lighting-nav-spawn/ }
+    - { title: "16 · Shipping a map",       url: /16-shipping-a-map/ }
+
+- num: "17–20"
+  title: Bones' Mapping Tutorial
+  url: /17-bones-getting-started/
+  pages:
+    - { title: "17 · Getting started",      url: /17-bones-getting-started/ }
+    - { title: "18 · The editor windows",   url: /18-bones-editor-windows/ }
+    - { title: "19 · Building a base",      url: /19-bones-building-a-base/ }
+    - { title: "20 · Environment & finishing", url: /20-bones-environment-finishing/ }
+
 - num: "40"
   title: The Construction Mod
   url: /40-construction-mod/

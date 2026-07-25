@@ -35,6 +35,7 @@ Every non-obvious claim carries one of these:
 | **[patch-script]** | Confirmed by reading a community patch's own shipped `.cs` |
 | **[support-script]** | Confirmed by reading the community support pack's own shipped `.cs` |
 | **[mod-script]** | Confirmed by reading a documented community mod's own shipped files |
+| **[bones]** | From NecroBones' Tribes 2 Mapping Tutorial — community practice, attributed |
 | **[community]** | From the 2002–2003 tutorial corpus; widely relied on, not independently confirmed |
 | **[inferred]** | Reasoned from the above; plausible but unverified |
 
@@ -73,6 +74,9 @@ flowchart TD
     C --> F["06 · Shipping<br/>packaging, hosting, debugging"]
     D --> F
     E --> F
+    E --> MAP["10–16 · Mapping<br/>the in-game editor, terrain,<br/>lighting, shipping a map"]
+    MAP --> BONES["17–20 · Bones' Tutorial<br/>community mapping practice"]
+    BONES --> F
     F --> P["07 · Community Patches<br/>what TribesNEXT and RC2a<br/>change on top of all the above"]
     P --> S["08 · The Support Pack<br/>the community script library<br/>and module system"]
     S --> M["40 · The Construction Mod<br/>a total conversion, studied:<br/>what it did and why"]
@@ -158,6 +162,29 @@ Read these before anything else — they explain most "why doesn't my change tak
 | [Packaging](06-shipping/packaging.md) | Mod folder layout, `.vl2` building, `.dso` distribution |
 | [Hosting and testing](06-shipping/hosting-and-testing.md) | LAN, dedicated, PURE servers, testing loops |
 | [Debugging](06-shipping/debugging.md) | Console, `trace`, `dump`, telnet debugger, common errors |
+
+### 10–16 · [Mapping](10-mapping/README.md)
+Making maps, from Sierra's own mission-editor manual shipped inside `scripts.vl2`.
+
+| Page | What it answers |
+|---|---|
+| [10 · Mapping](10-mapping/README.md) | The file set, the toolchain, the end-to-end workflow |
+| [11 · The Mission Editor](11-mission-editor/README.md) | `F11`, the eight tools, File/Edit/Camera menus |
+| [12 · World Editor](12-world-editor/README.md) | Placing objects; Tree, Inspector, Creator, drop rules |
+| [13 · Terrain](13-terrain/README.md) | Brush editing, the 14-operation Terraform stack, mission area |
+| [14 · Terrain texturing](14-terrain-texturing/README.md) | Placement by rule, manual painting, the four-texture rule |
+| [15 · Lighting, nav & spawn data](15-lighting-nav-spawn/README.md) | Relighting, `.ml`, `.nav`, `.spn` |
+| [16 · Shipping a map](16-shipping-a-map/README.md) | Gametype wiring, headers, what clients need |
+
+### 17–20 · [Bones' Mapping Tutorial](17-bones-getting-started/README.md)
+NecroBones' community tutorial — the workflow, crashes and design judgement the manual omits.
+
+| Page | What it answers |
+|---|---|
+| [17 · Getting started](17-bones-getting-started/README.md) | Server-side maps, setup, the interior-placement crash |
+| [18 · The editor windows](18-bones-editor-windows/README.md) | Tree, Inspector, Creator, the gizmo |
+| [19 · Building a base](19-bones-building-a-base/README.md) | Power systems, objectives, vehicle pads, spawns |
+| [20 · Environment & finishing](20-bones-environment-finishing/README.md) | Sky, fog layers, load screens, the final pass |
 
 ### 07 · [Community Patches](07-community-patches/README.md)
 | Page | What it answers |
