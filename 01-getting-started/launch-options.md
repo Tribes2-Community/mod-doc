@@ -116,7 +116,7 @@ exec($serverprefs, true, true);      // prefs/serverPrefs.cs
 
 then `autoexec.cs` twice — once before defaults for command-line overrides, once after for video/window
 settings. Anything you want configurable belongs in a pref variable, not a switch. See
-[Global variables](../90-reference/global-variables.md).
+[Global variables](../reference/global-variables.md).
 
 ## Under the community patches
 

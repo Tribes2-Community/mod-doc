@@ -156,7 +156,7 @@ Tribes2.exe -spnBuild <MissionName> <MissionType>
 ```
 
 Produces `terrains/<Name>.spn` — 81 ship in the vanilla archives
-([File formats](../90-reference/file-formats.md)).
+([File formats](../reference/file-formats.md)).
 
 **This is the spawn graph for spawn spheres**, and it is a required build step that placing the spheres
 does not perform. NecroBones is explicit **[bones]**:

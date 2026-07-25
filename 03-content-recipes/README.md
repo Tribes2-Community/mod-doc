@@ -91,7 +91,7 @@ Full detail in [07 · Community Patches](../07-community-patches/README.md).
 
 ## A caution about the tutorial corpus
 
-The [community tutorials](../90-reference/source-tutorial-index.md) are the origin of most of these
+The [community tutorials](../reference/source-tutorial-index.md) are the origin of most of these
 recipes and are worth reading. They also contain a fair amount of guesswork stated as fact. The author of
 `coding_knowledge.txt` is refreshingly honest about it **[community]**:
 

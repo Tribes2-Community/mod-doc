@@ -314,7 +314,7 @@ Three of these are worth noting:
 ## New console functions
 
 Registered by `IFC22.dll` at `DllMain` **[binary]**. See
-[Console functions](../90-reference/console-functions.md#under-the-community-patches) for the full list;
+[Console functions](../reference/console-functions.md#under-the-community-patches) for the full list;
 in summary:
 
 | Group | Functions |

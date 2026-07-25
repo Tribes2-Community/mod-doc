@@ -119,7 +119,7 @@ Tribes2.exe -spnBuild <MissionName> <MissionType>
 
 There is also `Tribes2.exe <file>.dif`, which sets `$LaunchMode = "InteriorView"` for inspecting a
 building on its own **[script]**, and `-show` for the shape viewer
-([Console functions](../90-reference/console-functions.md#shape-viewer)).
+([Console functions](../reference/console-functions.md#shape-viewer)).
 
 ## Where mapping sits relative to the rest of this handbook
 
@@ -128,7 +128,7 @@ building on its own **[script]**, and `-show` for the shape viewer
 | The `.mis` file format and its header comments | [Missions](../05-gameplay-systems/missions.md) |
 | What a gametype expects a map to contain | [Gametypes](../05-gameplay-systems/gametypes.md) |
 | How bots use `.nav` | [AI and bots](../05-gameplay-systems/ai-bots.md) |
-| The formats themselves | [File formats](../90-reference/file-formats.md) |
+| The formats themselves | [File formats](../reference/file-formats.md) |
 | Placing *deployables* at runtime rather than authoring | [Turrets and deployables](../03-content-recipes/turrets-and-deployables.md) |
 
 [Missions](../05-gameplay-systems/missions.md) covers the `.mis` as a **data file a mod reads**. This

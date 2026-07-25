@@ -116,7 +116,7 @@ decades.
 | `PJEnhancedRecording.cs` | 1.0.1 | Support for adding more information to demo recordings |
 
 Extends vanilla's demo system (`startRecord` / `playDemo` — see
-[Console functions](../90-reference/console-functions.md)). `flag_tracker.cs` and `team_tracker.cs` were
+[Console functions](../reference/console-functions.md)). `flag_tracker.cs` and `team_tracker.cs` were
 both modified in 2003 to work with demos recorded through it **[support-script]**, so if you consume
 either during playback, that dependency is real.
 

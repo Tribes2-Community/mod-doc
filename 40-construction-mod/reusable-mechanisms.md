@@ -459,7 +459,7 @@ Three worth singling out:
 - **`link` / `sidelink` / `cubefix`** — snapping a face of one object to a face of another, which is what
   makes pieces align when stacked.
 
-**Provenance.** DynaBlade is also a [tutorial author](../90-reference/source-tutorial-index.md) and
+**Provenance.** DynaBlade is also a [tutorial author](../reference/source-tutorial-index.md) and
 co-credited on `saveBuilding.cs`. The library predates the mod and was written to be shared.
 
 ---

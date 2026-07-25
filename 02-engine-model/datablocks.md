@@ -258,7 +258,7 @@ Census of the shipped scripts **[script]**, most-used first:
 | `WheeledVehicleData` | 1 | Tank |
 | `StationFXVehicleData`, `StationFXPersonalData` | 1 each | Inventory station effects |
 
-Field references for each are in [Datablock classes](../90-reference/datablock-classes.md), and the
+Field references for each are in [Datablock classes](../reference/datablock-classes.md), and the
 recipes in [03 · Content Recipes](../03-content-recipes/README.md) show them in use.
 
 ## Under the community patches

@@ -10,7 +10,7 @@ game design in vanilla 25034.
 | Studio | Codality, Inc. |
 | Gametype file | `scripts/TR2Game.cs` — 3204 lines, inside `TR2final105-server.vl2` |
 | Class | `TR2Game` |
-| Ships in | Every clean 25034 install — these are three of the nineteen `base/` archives (section 90) |
+| Ships in | Every clean 25034 install — these are three of the nineteen `base/` archives (see [Reference](../reference/file-formats.md)) |
 
 Unlike Defend and Destroy, this is not a case of a mod author's work being absorbed into base. Team
 Rabbit 2 was purpose-built for Tribes 2 by an outside studio and shipped by Sierra as part of the retail

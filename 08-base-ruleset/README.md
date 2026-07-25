@@ -288,5 +288,5 @@ Two interactions worth knowing:
 - [22 · Classic 1.1](../22-classic-1-1/README.md#the-physics-change-skiing-friction-and-momentum) — the same fields, retuned
 - [Gametypes](../05-gameplay-systems/gametypes.md) — extending `DefaultGame`
 - [Datablocks](../02-engine-model/datablocks.md) — how armour inheritance resolves
-- [Global variables](../90-reference/global-variables.md) — the full `$Host::` reference
+- [Global variables](../reference/global-variables.md) — the full `$Host::` reference
 - [Mod paths and overrides](../02-engine-model/mod-paths-and-overrides.md) — PURE servers

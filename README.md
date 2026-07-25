@@ -86,7 +86,7 @@ flowchart TD
     TS --> GT["31–39 · Gametypes<br/>base and Classic, side by side,<br/>ending with Team Rabbit 2"]
     GT --> M["40 · The Construction Mod<br/>a total conversion, studied:<br/>what it did and why"]
     M --> FK["41–48 · The Construction forks<br/>eight derivatives of 0.69a,<br/>compared against the base"]
-    FK --> G["90 · Reference<br/>console functions, class tree,<br/>file formats, tutorial index"]
+    FK --> G["Reference<br/>console functions, class tree,<br/>file formats, tutorial index"]
 ```
 
 Sections **07**–**09**, **21–39** and **40–48** are context rather than instruction — what your users are
@@ -281,15 +281,15 @@ Each derives from **Construction 0.69a**. The percentage is how much of that bas
 | [47](47-ultimate-build/README.md) | Ultimate Build 2.0 | 27 % | `serverScripts/` subtree, RP money, bundles Tricon 2 |
 | [48](48-c2k-construction/README.md) | c2kconstruction | 67 % | Largest package; Tricon 2 admin suite; ships mostly `.dso` |
 
-### 90 · [Reference](90-reference/README.md)
+### [Reference](reference/README.md)
 | Page | What it answers |
 |---|---|
-| [Console functions](90-reference/console-functions.md) | The engine-registered function surface |
-| [Datablock classes](90-reference/datablock-classes.md) | Every datablock type you can declare |
-| [Class hierarchy](90-reference/class-hierarchy.md) | The engine object tree |
-| [File formats](90-reference/file-formats.md) | `.vl2`, `.dts`, `.dsq`, `.dif`, `.ter`, `.dso`, and the rest |
-| [Global variables](90-reference/global-variables.md) | `$pref::`, `$Host::`, and other well-known globals |
-| [Source tutorial index](90-reference/source-tutorial-index.md) | Map of the original community tutorial corpus |
+| [Console functions](reference/console-functions.md) | The engine-registered function surface |
+| [Datablock classes](reference/datablock-classes.md) | Every datablock type you can declare |
+| [Class hierarchy](reference/class-hierarchy.md) | The engine object tree |
+| [File formats](reference/file-formats.md) | `.vl2`, `.dts`, `.dsq`, `.dif`, `.ter`, `.dso`, and the rest |
+| [Global variables](reference/global-variables.md) | `$pref::`, `$Host::`, and other well-known globals |
+| [Source tutorial index](reference/source-tutorial-index.md) | Map of the original community tutorial corpus |
 
 ---
 
@@ -301,7 +301,7 @@ Each derives from **Construction 0.69a**. The percentage is how much of that bas
 | Shipped V12 GUI | `base/scripts.vl2` `gui/` (136 files) | Primary |
 | Classic mod scripts | `GameData/Classic/scripts/` | Primary — a real, complete mod to read |
 | `Tribes2.exe` | `GameData/Tribes2.exe` | Primary — string and disassembly evidence |
-| Community tutorials | `T2ModTutorialDatabase/` † | Secondary — see [tutorial index](90-reference/source-tutorial-index.md) |
+| Community tutorials | `T2ModTutorialDatabase/` † | Secondary — see [tutorial index](reference/source-tutorial-index.md) |
 | Project RE notes | `docs/` † | Secondary — deeper binary analysis |
 
 † Not included in this repository. These sit alongside it in the authoring workspace; the paths are

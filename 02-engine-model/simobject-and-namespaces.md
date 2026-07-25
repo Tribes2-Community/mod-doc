@@ -287,5 +287,5 @@ was removed in the QoL rewrite.
 - [Datablocks](datablocks.md) — the static half of the object model
 - [Packages](packages.md) — overriding the namespaced functions described here
 - [Scheduling and events](scheduling-and-events.md) — `schedule` and object cleanup
-- [Class hierarchy](../90-reference/class-hierarchy.md) — the engine class tree
+- [Class hierarchy](../reference/class-hierarchy.md) — the engine class tree
 - [07 · Community Patches](../07-community-patches/README.md) — the patch-added console surface

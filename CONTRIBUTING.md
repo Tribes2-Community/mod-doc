@@ -51,8 +51,9 @@ Other fences use their real language: `bash`, `bat`, `powershell`, `ini`,
 5. Cross-link it from related pages.
 
 Sections are numbered so material can be inserted without renumbering:
-`01`–`08` are instruction, `40`–`48` are mod studies, `90` is reference, and
-`09`–`39` are deliberately free.
+`01`–`08` are instruction, `40`–`48` are mod studies, and `09`–`39` are deliberately free.
+**Reference carries no number at all** — it is the one section meant to keep growing indefinitely, and a
+number would imply a ceiling that doesn't exist.
 
 ## Checks before you open a PR
 

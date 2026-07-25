@@ -73,7 +73,7 @@ the classic community mods — reuse the shipped `.dts` shapes and change only s
 | `.png` / `.jpg` / `.bmp` | Ordinary images. Textures are straightforward to replace. |
 | `.bm8` | 8-bit paletted Tribes 2 bitmap, used for low-end systems. Rarely worth authoring. |
 
-See [File formats](../90-reference/file-formats.md) for the full catalog.
+See [File formats](../reference/file-formats.md) for the full catalog.
 
 ## Under the community patches
 
@@ -118,5 +118,5 @@ Server-side gameplay mods do not need it.
 ## Related
 
 - [Your first mod](your-first-mod.md) — put the tools to use
-- [File formats](../90-reference/file-formats.md) — extension catalog
+- [File formats](../reference/file-formats.md) — extension catalog
 - [Debugging](../06-shipping/debugging.md) — the console and logging

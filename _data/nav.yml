@@ -163,13 +163,12 @@
     - { title: "47 · Ultimate Build 2.0", url: /47-ultimate-build/ }
     - { title: "48 · c2kconstruction",    url: /48-c2k-construction/ }
 
-- num: "90"
-  title: Reference
-  url: /90-reference/
+- title: Reference
+  url: /reference/
   pages:
-    - { title: "Console functions",       url: /90-reference/console-functions }
-    - { title: "Datablock classes",       url: /90-reference/datablock-classes }
-    - { title: "Class hierarchy",         url: /90-reference/class-hierarchy }
-    - { title: "File formats",            url: /90-reference/file-formats }
-    - { title: "Global variables",        url: /90-reference/global-variables }
-    - { title: "Source tutorial index",   url: /90-reference/source-tutorial-index }
+    - { title: "Console functions",       url: /reference/console-functions }
+    - { title: "Datablock classes",       url: /reference/datablock-classes }
+    - { title: "Class hierarchy",         url: /reference/class-hierarchy }
+    - { title: "File formats",            url: /reference/file-formats }
+    - { title: "Global variables",        url: /reference/global-variables }
+    - { title: "Source tutorial index",   url: /reference/source-tutorial-index }

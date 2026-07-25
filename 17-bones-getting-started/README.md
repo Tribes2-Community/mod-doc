@@ -91,7 +91,7 @@ them ([16 · Shipping a map](../16-shipping-a-map/README.md#the-headers-the-edit
 
 Note the reminder that `.mis` files *"can be opened in wordpad or notepad, and VL2 archives can be opened
 using winzip"* **[bones]** — the `.vl2`-is-a-zip fact from
-[File formats](../90-reference/file-formats.md), stated in 2002.
+[File formats](../reference/file-formats.md), stated in 2002.
 
 ## Before you start: three setup steps
 

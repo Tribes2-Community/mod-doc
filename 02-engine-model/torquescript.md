@@ -301,7 +301,7 @@ Vectors are three-word strings, manipulated through console functions:
 ```
 
 Also available: `vectorSub`, `vectorNormalize`, `vectorLen`, `vectorDist`, `vectorCross`.
-See [Console functions](../90-reference/console-functions.md).
+See [Console functions](../reference/console-functions.md).
 
 ## Comments
 
@@ -334,7 +334,7 @@ model, and the operator set are exactly as described above. Every idiom on this 
 What the patches add is *vocabulary*, not grammar: around 30 new console functions registered by
 `IFC22.dll` **[binary]**, and — on RC2a only — a `rubyExec` / `rubyEval` bridge into an embedded Ruby
 interpreter **[patch-script]**. Both are ordinary function calls. See
-[Console functions](../90-reference/console-functions.md#under-the-community-patches).
+[Console functions](../reference/console-functions.md#under-the-community-patches).
 
 The one thing worth internalising: **a call to a function that does not exist produces a console error but
 does not halt the script.** So calling a patch-only function on a vanilla install is noisy rather than
@@ -345,4 +345,4 @@ fatal — but guard anyway if you support both.
 - [SimObjects and namespaces](simobject-and-namespaces.md) — how `Class::method` dispatch resolves
 - [Datablocks](datablocks.md) — the `datablock` declaration in depth
 - [Packages](packages.md) — `package` and `Parent::`
-- [Console functions](../90-reference/console-functions.md) — the built-in function surface
+- [Console functions](../reference/console-functions.md) — the built-in function surface

@@ -125,7 +125,7 @@ whole reason it works at all across 1.4.1–1.5.1.
 directly by something else, and — more importantly — would be compiled to `.dso`. A bare function
 definition executed outside its package wrapper would override *permanently*, with no way to deactivate
 it. Naming them `.ovl` makes them inert to every mechanism except this one. See
-[File formats](../90-reference/file-formats.md).
+[File formats](../reference/file-formats.md).
 
 The non-packaged helpers are loaded conventionally, before the package is built:
 

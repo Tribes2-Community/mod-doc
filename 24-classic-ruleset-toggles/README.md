@@ -196,7 +196,7 @@ matters if admins edit prefs by hand. If you need the flat names for that, keep 
 announcement from a parallel array of *labels* instead; you still get one list, just not one variable.
 
 See [TorqueScript](../02-engine-model/torquescript.md) for the array-global semantics, and
-[Console functions](../90-reference/console-functions.md) for what actually exists in V12.
+[Console functions](../reference/console-functions.md) for what actually exists in V12.
 
 ### Where it does not reach
 

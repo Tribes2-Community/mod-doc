@@ -87,7 +87,7 @@ rendering stays clean.
 ## `.dml` — the material list
 
 Materials are grouped into `.dml` (DyMaterial List) files — 89 ship in the vanilla archives
-([File formats](../90-reference/file-formats.md)). `makeTestTerrain` takes up to eight of them
+([File formats](../reference/file-formats.md)). `makeTestTerrain` takes up to eight of them
 **[binary]**:
 
 ```
@@ -137,5 +137,5 @@ metal.
 
 - [13 · Terrain](../13-terrain/README.md) — the heightfield these materials sit on
 - [15 · Lighting, navigation & spawn data](../15-lighting-nav-spawn/README.md) — regenerate after texture changes
-- [File formats](../90-reference/file-formats.md) — `.dml`, `.png`, `.jpg`, `.bm8`
+- [File formats](../reference/file-formats.md) — `.dml`, `.png`, `.jpg`, `.bm8`
 - [Armors](../03-content-recipes/armors.md) — footstep sounds keyed off material sound type

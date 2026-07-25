@@ -41,7 +41,7 @@ Where Ultimate Build differs from Power Edition is that it also **changed 69 bas
 subtree sits on top of a substantially reworked base, and only 27 % of 0.69a survives intact.
 
 Note `quadchain.cs`: the quad-barrel chaingun from the 2003 community tutorial corpus
-(`quadchain.html`, [tutorial index](../90-reference/source-tutorial-index.md)) shipping in a production
+(`quadchain.html`, [tutorial index](../reference/source-tutorial-index.md)) shipping in a production
 mod.
 
 ## Tricon 2
@@ -70,7 +70,7 @@ Type a text chat message (global or team) that contains nothing but your in-game
 Two things worth noting for a modder:
 
 - **It uses the engine's telnet console** (`telnetSetParameters` — see
-  [Console functions](../90-reference/console-functions.md#debugging)), the same facility documented in
+  [Console functions](../reference/console-functions.md#debugging)), the same facility documented in
   [Debugging](../06-shipping/debugging.md#telnet-console). A mod cannot open a new socket type, so remote
   administration on this engine means telnet.
 - **Authentication is a chat message containing only the password.** That is a workable pattern given the

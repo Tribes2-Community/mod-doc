@@ -325,5 +325,5 @@ it and refuses to load otherwise **[patch-script]**. The guard recommended below
 - [Mod paths and overrides](../02-engine-model/mod-paths-and-overrides.md) — how your files get found
 - [Hosting and testing](hosting-and-testing.md) — testing before release
 - [Launch options](../01-getting-started/launch-options.md) — `-prepbuild` and the rest
-- [File formats](../90-reference/file-formats.md) — `.vl2` and `.dso`
+- [File formats](../reference/file-formats.md) — `.vl2` and `.dso`
 - [Modding against a patched install](../07-community-patches/modding-against-a-patched-install.md#distribution-notes) — distribution guidance

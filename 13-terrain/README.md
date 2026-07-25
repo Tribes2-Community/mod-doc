@@ -196,4 +196,4 @@ against ([14](../14-terrain-texturing/README.md)).
 - [14 · Terrain texturing](../14-terrain-texturing/README.md) — materials on top of this geometry
 - [12 · World Editor](../12-world-editor/README.md) — placing objects on it
 - [15 · Lighting, navigation & spawn data](../15-lighting-nav-spawn/README.md) — what to regenerate after terrain changes
-- [File formats](../90-reference/file-formats.md) — `.ter`, `.dml`
+- [File formats](../reference/file-formats.md) — `.ter`, `.dml`

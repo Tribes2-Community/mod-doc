@@ -134,7 +134,7 @@ flowchart LR
 
 - **BadShot** — *"Taking the time to help me with some nasty bugs. Knowing alot for tribes2 stuff.. and
   being willing to share it. Helping all those other modders."* He is the author of 26 of the tutorials in
-  the [community corpus](../90-reference/source-tutorial-index.md).
+  the [community corpus](../reference/source-tutorial-index.md).
 - **DynaBlade** — *"His Awesome function librarys."* Also a tutorial author, and `saveBuilding.cs` is
   credited as *"a joint effort of DynaBlade and JackTL"* **[mod-script]**.
 

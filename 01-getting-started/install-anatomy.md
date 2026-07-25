@@ -177,5 +177,5 @@ hit. That mechanism is the subject of
 
 - [What you need](what-you-need.md) — tools for opening the archives described here
 - [Mod paths and overrides](../02-engine-model/mod-paths-and-overrides.md) — how lookups resolve
-- [File formats](../90-reference/file-formats.md) — what each extension actually is
+- [File formats](../reference/file-formats.md) — what each extension actually is
 - [07 · Community Patches](../07-community-patches/README.md) — what the patches change

@@ -1,4 +1,4 @@
-# 90 · Reference
+# Reference
 
 Lookup material. Not meant to be read front to back.
 

@@ -340,5 +340,5 @@ Three small notes:
 - [Gametypes](gametypes.md) — the `// MissionTypes = ` counterpart
 - [AI and bots](ai-bots.md) — `.nav` graphs and `-navBuild`
 - [Boot sequence](../02-engine-model/boot-sequence.md) — the mission load chain
-- [File formats](../90-reference/file-formats.md) — `.mis`, `.ter`, `.nav`, `.dif`, `.spn`
+- [File formats](../reference/file-formats.md) — `.mis`, `.ter`, `.nav`, `.dif`, `.spn`
 - [07 · Community Patches](../07-community-patches/README.md) — asset downloads and editor changes

@@ -20,7 +20,7 @@
   <div class="nav-section">
     <a class="nav-section-title{% if here == sec_norm %} current{% endif %}"
        href="{{ section.url | relative_url }}">
-      <span class="nav-num">{{ section.num }}</span>{{ section.title }}
+      {%- if section.num %}<span class="nav-num">{{ section.num }}</span>{% endif %}{{ section.title }}
     </a>
     <ul>
       {%- for p in section.pages %}

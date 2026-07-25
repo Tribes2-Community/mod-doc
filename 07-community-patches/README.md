@@ -69,8 +69,8 @@ headline, and it is why this handbook documents vanilla first.
 | HUD | Aspect-aware repositioning, opacity changes | [HUD](../04-interface/hud.md#under-the-community-patches) |
 | Chat | Tag filtering and a bad-word filter on inbound messages | [Text and messaging](../04-interface/text-and-messaging.md#under-the-community-patches) |
 | Gametype lists | Master-server type registration stubbed out | [Gametypes](../05-gameplay-systems/gametypes.md#under-the-community-patches) |
-| Console surface | ~30 new functions registered by `IFC22.dll` | [Console functions](../90-reference/console-functions.md#under-the-community-patches) |
-| Preferences | New `$pref::` families | [Global variables](../90-reference/global-variables.md#under-the-community-patches) |
+| Console surface | ~30 new functions registered by `IFC22.dll` | [Console functions](../reference/console-functions.md#under-the-community-patches) |
+| Preferences | New `$pref::` families | [Global variables](../reference/global-variables.md#under-the-community-patches) |
 
 Each of those pages carries an **"Under the community patches"** section at the end. The vanilla material
 above it stays correct; the patch section says what is layered on top.
