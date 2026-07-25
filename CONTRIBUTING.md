@@ -10,6 +10,7 @@ Every non-obvious statement carries a marker:
 | Marker | Means |
 |---|---|
 | `**[binary]**` | Confirmed by disassembly or string analysis of `Tribes2.exe` or a patch DLL |
+| `**[engine-source]**` | Confirmed by reading the V12 engine's own archived C++ source — cite file and line |
 | `**[script]**` | Confirmed by reading the shipped V12 `.cs` in `base/scripts.vl2` — cite file and line |
 | `**[patch-script]**` | Confirmed by reading a community patch's own shipped `.cs` |
 | `**[support-script]**` | Confirmed by reading the community support pack's own shipped `.cs` |

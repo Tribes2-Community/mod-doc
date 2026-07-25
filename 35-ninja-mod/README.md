@@ -52,4 +52,5 @@ its beacons worked in play.
 
 - [58 · The Construction Mod](../58-construction-mod/README.md) — the mod that names NinjaMod as an ancestor
 - [31 · The base ruleset](../31-base-ruleset/README.md) — the baseline NinjaMod's tokens were tested against
+- [TorqueScript — V12 Decompiler](../02-engine-model/torquescript-decompiler.md) — if you want to try reading NinjaMod's remaining 145 `.dso` files yourself
 - [Packaging](../06-shipping/packaging.md#dso-compilation) — what `.cs.dso` preserves and what it loses

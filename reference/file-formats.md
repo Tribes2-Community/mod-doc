@@ -48,6 +48,9 @@ mode **[script]**.
 own launchers delete them all before every run **[script]**. See
 [Packaging](../06-shipping/packaging.md#dso-compilation).
 
+For the format itself — header, string/float tables, the full opcode set, and a byte-level worked
+example — see [TorqueScript — V12 Decompiler](../02-engine-model/torquescript-decompiler.md).
+
 ### `.gui` — GUI definition
 
 TorqueScript, executed like any script. A nested chain of `new` statements. Written by the in-game GUI

@@ -60,4 +60,5 @@ design.
 
 - [30 · Team Rabbit 2](../30-team-rabbit-2/README.md) — the bonus-matrix system reused here
 - [56 · Powers Mod](../56-powers-mod/README.md) — another custom-class combat mod, with full source available
+- [TorqueScript — V12 Decompiler](../02-engine-model/torquescript-decompiler.md) — the format standing between "mostly secret" and readable
 - [Packaging](../06-shipping/packaging.md#dso-compilation) — what compiling to `.dso` does and does not hide
