@@ -213,7 +213,7 @@ See [RC2a](../07-community-patches/rc2a.md#the-collision-that-matters).
 
 ### Other archives that may be in `base/`
 
-The community [support pack](../08-support-pack/README.md) installs as `base/support.vl2`
+The community [support pack](../09-support-pack/README.md) installs as `base/support.vl2`
 **[support-script]** and claims:
 
 | Path | Contents |

@@ -104,7 +104,7 @@ render in Saira and U001, not Univers. See [GUI system](../04-interface/gui-syst
 Add the community **support pack** to your reference tree as well — `base/support.vl2`, if installed. It
 is a script library and module system that much of the surviving client-side community corpus depends on,
 and its 36 modules are self-documenting in their header comments. See
-[08 · The Support Pack](../08-support-pack/README.md).
+[09 · The Support Pack](../09-support-pack/README.md).
 
 Server-side gameplay mods do not need it.
 

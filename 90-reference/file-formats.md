@@ -267,13 +267,13 @@ Stored.
 
 ### `.ini` — the support pack's config
 
-Not an engine format. The community [support pack](../08-support-pack/README.md) writes
+Not an engine format. The community [support pack](../09-support-pack/README.md) writes
 `prefs/autoload.ini` (load order and per-script enable/disable, `;` for comments) and `prefs/autoload.log`
 **[support-script]**. Both are plain text parsed by TorqueScript with `FileObject`, not by the engine.
 
 The pack's `// #directive = value` script headers are the same idea — metadata carried in comments the
 compiler ignores, parsed by script. Vanilla uses the technique for `// MissionTypes = ` and
-`// DisplayName = ` **[script]**; see [The autoload system](../08-support-pack/autoload-system.md).
+`// DisplayName = ` **[script]**; see [The autoload system](../09-support-pack/autoload-system.md).
 
 ## Related
 

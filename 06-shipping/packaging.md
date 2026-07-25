@@ -298,7 +298,7 @@ Requires: support.vl2  (support/callback.cs, support/flag_tracker.cs 0.0.3+)
 
 Do not bundle `support.vl2` — link to it, as with the patches. And do not ship files at any path it
 claims: `autoload.cs`, `support/*`, `scripts/autoexec/autoload_launcher.cs`, `prefs/autoload.*`. See
-[08 · The Support Pack](../08-support-pack/README.md).
+[09 · The Support Pack](../09-support-pack/README.md).
 
 For a **server-side** mod, take no support-pack dependency at all — it is client-side infrastructure and
 the install requirement buys you nothing.

@@ -279,7 +279,7 @@ If `base/support.vl2` is installed **[support-script]**:
 | `$AutoloadIni` | `"prefs/autoload.ini"` |
 | `$AutoloadLog` | `"prefs/autoload.log"` |
 
-See [The autoload system](../08-support-pack/autoload-system.md).
+See [The autoload system](../09-support-pack/autoload-system.md).
 
 ### Naming, again
 

@@ -158,7 +158,7 @@ RC2a instead ships `t2dll.dll`, `rubyintersect.dll`, `msvcrt-ruby190.dll`, and a
 Independently of the patches, many installs carry `base/support.vl2` (392 KB) — the community script
 library and module system. It adds `base/autoload.cs`, a `support/` module tree, a hook in
 `scripts/autoexec/`, and writes `prefs/autoload.ini` and `prefs/autoload.log` at runtime
-**[support-script]**. See [08 · The Support Pack](../08-support-pack/README.md).
+**[support-script]**. See [09 · The Support Pack](../09-support-pack/README.md).
 
 ### What does not change
 

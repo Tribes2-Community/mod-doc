@@ -91,7 +91,7 @@ TDXNullMale1.cs               TDXNullMale3.cs        TDXMenuMale3.cs
 
 `TDX*` files named for player-model and sound overrides, plus a chat script in `autoexec/`. Note that
 `scripts/autoexec/` placement — the same directory used by the
-[support pack](../08-support-pack/README.md) and [RC2a](../07-community-patches/rc2a.md), and by your own
+[support pack](../09-support-pack/README.md) and [RC2a](../07-community-patches/rc2a.md), and by your own
 mod's entry script. On this install that directory has multiple occupants loaded in OS-determined order
 ([Boot sequence](../02-engine-model/boot-sequence.md)).
 

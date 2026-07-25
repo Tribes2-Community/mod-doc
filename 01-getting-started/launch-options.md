@@ -137,7 +137,7 @@ a loose root file executed by the DLL, outside the mod path stack. See
 
 ### Switches added by the support pack
 
-The community [support pack](../08-support-pack/README.md) parses two of its own in
+The community [support pack](../09-support-pack/README.md) parses two of its own in
 `DispatchLaunchMode()` **[support-script]**. They are script-side additions and do nothing on an install
 without the pack:
 

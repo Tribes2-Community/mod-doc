@@ -111,6 +111,7 @@ still community-authored mod content, so it is marked **[mod-script]** throughou
 
 ## Related
 
+- [08 · The base ruleset](../08-base-ruleset/README.md) — the 25034 baseline every number here is a delta against
 - [Mod paths and overrides](../02-engine-model/mod-paths-and-overrides.md) — how shadowing resolves
 - [Packages](../02-engine-model/packages.md) — the mechanism Classic declines to use
 - [40 · The Construction Mod](../40-construction-mod/README.md) — the other great shadowing mod

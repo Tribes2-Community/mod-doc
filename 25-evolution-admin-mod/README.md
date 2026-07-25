@@ -229,4 +229,4 @@ from the shipped tree. On a modern locked-down host that is a real constraint. S
 - [27 · teratos' evoClassic](../27-teratos-evoclassic/README.md) — the one-line fix
 - [Packages](../02-engine-model/packages.md) — the mechanism and its single-file constraint
 - [Packaging](../06-shipping/packaging.md) — `.dso` staleness, reached here by a second route
-- [08 · The Support Pack](../08-support-pack/README.md) — the other mod that generates behaviour from files on disk
+- [09 · The Support Pack](../09-support-pack/README.md) — the other mod that generates behaviour from files on disk

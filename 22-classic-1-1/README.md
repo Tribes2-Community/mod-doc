@@ -150,10 +150,28 @@ admin-loadable deployable sets, projectile-camera observation, and map reset. It
 comments, the densest file in the mod.
 
 **Defend and Destroy** (DnD) — the Tribes 1 gametype restored. Teams score per objective destroyed
-(vehicle stations, sensors, solar panels, generators, base turrets) plus per switch held. The readme
-notes it "isn't limited to just Classic mod" and instructs mappers to use the `"DnD"` string
-**[mod-script]** — so it is a reusable gametype, not a Classic-internal one. See
-[Gametypes](../05-gameplay-systems/gametypes.md).
+(vehicle stations, sensors, solar panels, generators, base turrets) plus per switch held.
+
+It is **not in the Classic mod tree at all.** `DnDGame.cs` ships in `base/scripts.vl2`, and its header
+reads **[script]**:
+
+```
+//  <> Defend and Destroy <>
+//
+//  Version: 1.1.25026
+//  Date: October 23, 2002
+//  By: ZOD
+```
+
+Same author as Classic, same week, carrying four of his `z0dd` signatures — but delivered **into Sierra's
+own base archive** by the retail patch rather than into the mod. That is the clearest single piece of
+evidence for section 21's claim that Sierra absorbed Classic-team work into the shipped product: a
+community-authored gametype living in `base/scripts.vl2` with the author's name on it.
+
+It also explains the readme's otherwise odd remark that DnD "isn't limited to just Classic mod"
+**[mod-script]**, and why mappers are told to use the `"DnD"` string — it is a base gametype available to
+any mod. See [Gametypes](../05-gameplay-systems/gametypes.md) and
+[08 · The base ruleset](../08-base-ruleset/README.md).
 
 ## The 24 maps
 

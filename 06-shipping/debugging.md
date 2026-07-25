@@ -295,7 +295,7 @@ your `Parent::` chain reach the patch's overrides and then vanilla's.
 | **"Force feedback does nothing"** | `IFC22.dll` stubs the Immersion exports **[binary]**. Expected on the QoL patch; RC2a still works. |
 | **"My chat markup is stripped"** | `MessageVector::validateTag` filters `<t2server:>` and `<tribe:>` **[patch-script]**. |
 | **"My autoexec script runs before the patch"** *(RC2a only)* | OS-determined glob order. Defer with `schedule(0, 0, …)`. |
-| **"A support-pack script silently didn't load"** | Read `prefs/autoload.log` — it names the cause (missing file, unmet `#include`, syntax error). Also check `#autoload` is the **first** directive; only the first non-blank line is tested **[support-script]**. See [The autoload system](../08-support-pack/autoload-system.md). |
+| **"A support-pack script silently didn't load"** | Read `prefs/autoload.log` — it names the cause (missing file, unmet `#include`, syntax error). Also check `#autoload` is the **first** directive; only the first non-blank line is tested **[support-script]**. See [The autoload system](../09-support-pack/autoload-system.md). |
 
 ### Detecting which environment you are in
 

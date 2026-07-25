@@ -1,4 +1,4 @@
-# 08 · The Support Pack (`support.vl2`)
+# 09 · The Support Pack (`support.vl2`)
 
 A community-built **script library and module system** for Tribes 2, distributed as a single `.vl2`
 dropped into `base/`. It is not a patch and not game content — it is infrastructure that other scripts

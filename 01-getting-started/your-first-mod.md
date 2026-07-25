@@ -210,7 +210,7 @@ overrides to vanilla.
 `t2csri_list.cs`, `t2csri_serv.cs` — inside `base/T2csri.vl2` **[patch-script]**. They and your entry
 script are executed in whatever order the OS returns.
 
-**If the [support pack](../08-support-pack/README.md) is installed**, it adds a fourth:
+**If the [support pack](../09-support-pack/README.md) is installed**, it adds a fourth:
 `scripts/autoexec/autoload_launcher.cs` **[support-script]**.
 
 Avoid the `t2csri_` and `autoload_` prefixes, and if your setup work

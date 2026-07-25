@@ -261,7 +261,7 @@ demonstration that it works at scale. What changes is that the stack is no longe
 | `console_client_patches` | Loose root file (QoL) | ~35 client-side overrides: UI, video, audio, input, chat | At boot, before your autoexec |
 | `t2csri_server` | `t2csri/serverSide.cs` | Server-side auth | `if ($PlayingOnline && !isActivePackage(t2csri_server))` **[patch-script]** |
 | `t2csri_ircfix` | RC2a only, `scripts/autoexec/t2csri_IRCfix.cs` | IRC fixes | At autoexec time |
-| `LoadLater` | [Support pack](../08-support-pack/README.md), `base/autoload.cs` | Deferred autoload work | At autoexec time, if installed |
+| `LoadLater` | [Support pack](../09-support-pack/README.md), `base/autoload.cs` | Deferred autoload work | At autoexec time, if installed |
 | `<Type>Game` | Vanilla gametype files | Per-mission | By `DefaultGame::activatePackages` |
 | **Yours** | Your autoexec script | Whatever you override | At autoexec time |
 
@@ -271,7 +271,7 @@ demonstration that it works at scale. What changes is that the stack is no longe
 > registry where each script attaches independently. If you are writing a **client-side** utility that
 > needs to observe an event several other scripts also observe, that is the better tool. For server-side
 > gameplay authority, packages remain correct. See
-> [Callbacks and events](../08-support-pack/callbacks-and-events.md).
+> [Callbacks and events](../09-support-pack/callbacks-and-events.md).
 
 Because `console_client_patches` activates before your autoexec script runs, **your package is outermost**
 and your overrides run first. Your `Parent::` reaches the patch's version; its `Parent::` reaches vanilla.

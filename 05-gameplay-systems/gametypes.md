@@ -480,6 +480,7 @@ your gametype hooks connection directly rather than through `DefaultGame::`, rea
 ## Related
 
 - [Missions](missions.md) — the `.mis` side of the pairing
+- [08 · The base ruleset](../08-base-ruleset/README.md) — the eleven shipped gametypes and how thin they are
 - [Boot sequence](../02-engine-model/boot-sequence.md) — the mission load chain
 - [22 · Classic 1.1](../22-classic-1-1/README.md) — Defend and Destroy, a shipped gametype addition you can read end to end
 - [23 · Classic 1.5.2](../23-classic-152/README.md) — Spawn CTF, and the `ai<Type>.cs` companion in practice

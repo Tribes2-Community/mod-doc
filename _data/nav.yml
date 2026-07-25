@@ -72,12 +72,16 @@
     - { title: "Modding a patched install", url: /07-community-patches/modding-against-a-patched-install }
 
 - num: "08"
+  title: The Base Ruleset
+  url: /08-base-ruleset/
+
+- num: "09"
   title: The Support Pack
-  url: /08-support-pack/
+  url: /09-support-pack/
   pages:
-    - { title: "The autoload system",     url: /08-support-pack/autoload-system }
-    - { title: "Callbacks and events",    url: /08-support-pack/callbacks-and-events }
-    - { title: "Library reference",       url: /08-support-pack/library-reference }
+    - { title: "The autoload system",     url: /09-support-pack/autoload-system }
+    - { title: "Callbacks and events",    url: /09-support-pack/callbacks-and-events }
+    - { title: "Library reference",       url: /09-support-pack/library-reference }
 
 - num: "10"
   title: Mapping

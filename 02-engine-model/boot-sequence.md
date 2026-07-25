@@ -314,7 +314,7 @@ schedule(0, 0, exec, "t2csri/serverglue.cs");
 
 ### The support pack
 
-Independently of either patch, the community [support pack](../08-support-pack/README.md) adds a further
+Independently of either patch, the community [support pack](../09-support-pack/README.md) adds a further
 occupant of the autoexec directory — `scripts/autoexec/autoload_launcher.cs` **[support-script]**:
 
 ```php
@@ -324,7 +324,7 @@ if( !$AutoloadExecuted ) exec("autoload.cs");
 which bootstraps a whole second loader: `base/autoload.cs` scans for `.cs` files carrying `// #autoload`
 directive headers, resolves their `#include` dependencies and version constraints, consults
 `prefs/autoload.ini` for order and exclusions, and `exec`s them. See
-[The autoload system](../08-support-pack/autoload-system.md).
+[The autoload system](../09-support-pack/autoload-system.md).
 
 So on a fully-loaded machine, `loadCustomScripts()` may execute RC2a's three files, the support pack's
 launcher, and your entry script — **in OS-determined order**. Defer anything order-sensitive.

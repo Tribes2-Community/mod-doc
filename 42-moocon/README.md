@@ -146,7 +146,7 @@ This is the single most interesting design decision in the fork family. Every ot
 derivative is a **fork** — to add something, you copy the whole mod. MooCon built an **extension point**:
 `Addons/addonexec.cfg` lists scripts to load, so third parties ship a file rather than a fork.
 
-It is the same problem the [support pack](../08-support-pack/README.md) solved for client-side scripts,
+It is the same problem the [support pack](../09-support-pack/README.md) solved for client-side scripts,
 solved independently for a server-side mod, and it is the correct answer to the composability cost that
 [file shadowing](../40-construction-mod/what-it-changed.md#the-shadowing-strategy) imposes on this family.
 
@@ -183,5 +183,5 @@ sitting outside `scripts/` entirely.
 ## Related
 
 - [40 · The Construction Mod](../40-construction-mod/README.md) — the 0.69a base and fork-family table
-- [08 · The Support Pack](../08-support-pack/README.md) — the same composability problem, client side
+- [09 · The Support Pack](../09-support-pack/README.md) — the same composability problem, client side
 - [07 · Community Patches](../07-community-patches/README.md) — Electricutioner and the door rewrite

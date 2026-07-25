@@ -78,7 +78,8 @@ flowchart TD
     MAP --> BONES["17–20 · Bones' Tutorial<br/>community mapping practice"]
     BONES --> F
     F --> P["07 · Community Patches<br/>what TribesNEXT and RC2a<br/>change on top of all the above"]
-    P --> S["08 · The Support Pack<br/>the community script library<br/>and module system"]
+    P --> BR["08 · The Base Ruleset<br/>gravity, armours, gametypes<br/>and prefs as 25034 shipped them"]
+    BR --> S["09 · The Support Pack<br/>the community script library<br/>and module system"]
     S --> CL["21–24 · Classic<br/>the ruleset that became the game,<br/>and its optional-rule system"]
     CL --> EV["25–27 · Evolution Admin Mod<br/>generated packages, leased admin,<br/>and a ten-year-old bug"]
     EV --> TS["28–30 · TacoServer<br/>the modern codebase:<br/>lineage, features, running it"]
@@ -87,7 +88,7 @@ flowchart TD
     FK --> G["90 · Reference<br/>console functions, class tree,<br/>file formats, tutorial index"]
 ```
 
-Sections **07**, **08**, **21–30** and **40–48** are context rather than instruction — what your users are
+Sections **07**–**09**, **21–30** and **40–48** are context rather than instruction — what your users are
 running, what libraries exist, and how the mods that shaped the live game were built. Numbers between 30
 and 40 are left free for further studies.
 
@@ -196,13 +197,20 @@ NecroBones' community tutorial — the workflow, crashes and design judgement th
 | [RC2a](07-community-patches/rc2a.md) | The 2009 Ruby-based predecessor, and its autoexec collision |
 | [Modding against a patched install](07-community-patches/modding-against-a-patched-install.md) | Collisions, the auth phase, testing, distribution |
 
-### 08 · [The Support Pack](08-support-pack/README.md)
+### 08 · [The Base Ruleset](08-base-ruleset/README.md)
+What build 25034 actually ships as its rules — the baseline every mod in sections 21–48 is a delta against.
+
 | Page | What it answers |
 |---|---|
-| [Section overview](08-support-pack/README.md) | What `support.vl2` is, why it exists, whether you need it |
-| [The autoload system](08-support-pack/autoload-system.md) | `// #directive` headers, `autoload.ini`, dependency and version resolution |
-| [Callbacks and events](08-support-pack/callbacks-and-events.md) | `callback.cs` and `events.cs` — multi-listener events |
-| [Library reference](08-support-pack/library-reference.md) | All 36 modules |
+| [08 · The base ruleset](08-base-ruleset/README.md) | Gravity, the nine armour datablocks, the eleven gametypes, the 36 `$Host::` defaults, tournament mode |
+
+### 09 · [The Support Pack](09-support-pack/README.md)
+| Page | What it answers |
+|---|---|
+| [Section overview](09-support-pack/README.md) | What `support.vl2` is, why it exists, whether you need it |
+| [The autoload system](09-support-pack/autoload-system.md) | `// #directive` headers, `autoload.ini`, dependency and version resolution |
+| [Callbacks and events](09-support-pack/callbacks-and-events.md) | `callback.cs` and `events.cs` — multi-listener events |
+| [Library reference](09-support-pack/library-reference.md) | All 36 modules |
 
 ### 21–24 · [Classic](21-classic/README.md)
 The ruleset that became the game — shipped in your install, and still the base every live server runs.
