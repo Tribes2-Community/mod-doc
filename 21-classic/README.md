@@ -31,8 +31,10 @@ $Classic::gravSetting = -26.9; // z0dd - ZOD, 9/13/02. Classic Gravity setting
 ```
 
 That single number — 34.5% more gravity — is the mod's thesis. Heavier gravity means faster descents,
-faster skiing, shorter hang time and a lower, quicker game. Classic's own readme puts it plainly
-**[mod-script]**:
+faster skiing, shorter hang time and a lower, quicker game. It is not the whole story, though — gravity is
+one line, and it sits alongside a much larger, undocumented retuning of skiing, friction and momentum
+covered in full in [22 · Classic 1.1](../22-classic-1-1/README.md#the-physics-change-skiing-friction-and-momentum).
+Classic's own readme puts the intent plainly **[mod-script]**:
 
 > "The Classic modification brings speed and intensity back to the Tribes game. The majority of the
 > changes revolve around creating a faster and more exciting game play experience."

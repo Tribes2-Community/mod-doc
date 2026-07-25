@@ -199,6 +199,47 @@ package MyMod
 };
 ```
 
+## The shipped roster
+
+Nine gametypes ship in `base/scripts.vl2`, all extending `defaultGame.cs`, plus a tenth — Team Rabbit 2 —
+that ships as its own set of archives entirely outside `scripts.vl2`. Sections 31–39 cover each in depth;
+this table is the map between them **[script]**:
+
+| File | Lines | Covered in |
+|---|---:|---|
+| `CTFGame.cs` | 2014 | [31 · Capture the Flag](../31-capture-the-flag/README.md) |
+| `DnDGame.cs` | 1331 | [32 · Defend and Destroy](../32-defend-and-destroy/README.md) |
+| `SiegeGame.cs` | 1213 | [33 · Siege](../33-siege/README.md) |
+| `BountyGame.cs` | 899 | [34 · Bounty](../34-bounty/README.md) |
+| `CnHGame.cs` | 466 | [35 · Capture and Hold](../35-capture-and-hold/README.md) |
+| `DMGame.cs` | 374 | [36 · Deathmatch](../36-deathmatch/README.md) |
+| `HuntersGame.cs` / `TeamHuntersGame.cs` | 1745 / 614 | [37 · Hunters & Team Hunters](../37-hunters/README.md) |
+| `RabbitGame.cs` | 739 | [38 · Rabbit](../38-rabbit/README.md) |
+| `TR2Game.cs` (own archives) | 3204 | [39 · Team Rabbit 2](../39-team-rabbit-2/README.md) |
+| `SinglePlayerGame.cs` | 1310 | Not covered — the campaign, not a multiplayer gametype |
+
+### Four relationships to Classic
+
+Reading all nine base gametypes against the Classic mod tree ([21 · Classic](../21-classic/README.md))
+sorts them into four categories:
+
+**Shadowed** — Classic ships its own replacement file. Only `CTFGame.cs` and `SiegeGame.cs`, the two
+gametypes competitive play actually runs. Classic also *adds* a gametype in this style, `SCtFGame.cs`
+(Spawn CTF), that exists only in the Classic tree.
+
+**Untouched** — five gametypes (Bounty, Capture and Hold, Deathmatch, Hunters/Team Hunters, Rabbit) have
+no Classic-side file at all and run exactly as base ships them under `-mod Classic`, because the mod path
+stack falls through to `base/` for anything the mod does not shadow. Classic changed the game's speed and
+admin surface; it left the party-game modes alone.
+
+**Added to base, not to Classic** — Defend and Destroy is the anomaly documented in
+[08 · The base ruleset](../08-base-ruleset/README.md#the-dnd-anomaly): a gametype written by Classic's own
+author, z0dd, but shipped by Sierra directly in `base/scripts.vl2` rather than in the Classic mod tree.
+
+**Integrated by reference** — Team Rabbit 2 is none of the above. Classic does not shadow it, but its
+`server.cs` conditionally `exec()`s the base copy, and six other Classic files patch themselves to
+recognise TR2's custom weapons and HUD data. See [39 · Team Rabbit 2](../39-team-rabbit-2/README.md).
+
 ## The `DefaultGame::` callback surface
 
 Roughly sixty methods **[script]**. The ones you will actually override:
@@ -479,6 +520,7 @@ your gametype hooks connection directly rather than through `DefaultGame::`, rea
 
 ## Related
 
+- [31–39 · Gametypes](../31-capture-the-flag/README.md) — the full roster, each covered in depth
 - [Missions](missions.md) — the `.mis` side of the pairing
 - [08 · The base ruleset](../08-base-ruleset/README.md) — the eleven shipped gametypes and how thin they are
 - [Boot sequence](../02-engine-model/boot-sequence.md) — the mission load chain

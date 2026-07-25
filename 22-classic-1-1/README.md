@@ -52,7 +52,7 @@ The three variants differ only in the launch line:
 `ispawn.exe` is Sierra's supervisor — it restarts the process if it dies, with the port as its first
 argument. See [Launch options](../01-getting-started/launch-options.md).
 
-## The physics change
+## The physics change: gravity
 
 One line, in `scripts/server.cs` **[mod-script]**:
 
@@ -82,6 +82,74 @@ $DefaultGravity = getGravity();
 ...
 setGravity($DefaultGravity);
 ```
+
+## The physics change: skiing, friction and momentum
+
+The readme's "Completely new physics model" line (section 22, player armour changes) is not just
+gravity. Fingerprinting every movement-related `PlayerData` field against base (section 08) turns up a
+second, larger, and until now undocumented change: **Classic strips out the horizontal speed governor
+that limits skiing in base, for every armour weight, and adds real ground-friction removal on top of it.**
+
+`scripts/player.cs`, light armour, base vs Classic **[script]** / **[mod-script]**:
+
+| Field | Base | Classic | |
+|---|---:|---:|---|
+| `runSurfaceAngle` | 70 | 70 | Unchanged — the ski-trigger slope is identical |
+| `noFrictionOnSki` | *(unset)* | `true` | **New** — ground friction actively removed while skiing |
+| `horizMaxSpeed` | 68 | **500** | The horizontal ceiling, effectively removed |
+| `horizResistSpeed` | 33 | 48.74 | Resistance now begins later |
+| `horizResistFactor` | 0.35 | **0** | Resistance strength zeroed — no active braking above the threshold |
+| `drag` / `maxdrag` | 0.275 / 0.4 | 0.134 / 0.3 | Roughly halved — velocity bleeds off far more slowly |
+| `jetForce` coefficient | 26.21 | 37.28 | +42% thrust-to-weight |
+| `upMaxSpeed` | 80 | 52 | Lower, and — see below — now uniform |
+
+The same shape repeats for medium and heavy, with one addition: **`upMaxSpeed` converges to a single
+value, 52, across all three weights**, where base varied it by class (80 / 70 / 60). Full comparison,
+all three armours **[mod-script]**:
+
+| | Light (base → Classic) | Medium (base → Classic) | Heavy (base → Classic) |
+|---|---|---|---|
+| `horizMaxSpeed` | 68 → 500 | 60 → 500 | 52 → 500 |
+| `horizResistFactor` | 0.35 → 0 | 0.32 → 0 | 0.29 → 0 |
+| `jetForce` coefficient | 26.21 → 37.28 | 25.22 → 33.79 | 22.47 → 29.58 |
+| `upMaxSpeed` | 80 → 52 | 70 → 52 | 60 → 52 |
+| `upResistSpeed` | 25 → 20.89 | 30 → 20.89 | 35 → 20.89 |
+
+Read together, this is a coherent, deliberate redesign rather than a handful of unrelated tweaks:
+
+**The ski-trigger angle never moves.** `runSurfaceAngle = 70` is identical in every armour, base and
+Classic alike. Classic did not make skiing easier to *start* — it changed everything about what happens
+once you are.
+
+**The horizontal speed cap is not lowered or raised — it is effectively deleted.** `horizMaxSpeed = 500`
+is far beyond anything a player can reach through normal acceleration; combined with
+`horizResistFactor = 0`, there is no active mechanism left decelerating a skiing player back toward a
+target speed. Base's governor — a hard ceiling plus a resistance force that kicks in below it — is fully
+disarmed, for all three weights, not just light armour.
+
+**`noFrictionOnSki` is new, not merely retuned.** No base armour sets it. Classic sets it to `true` on
+all nine `PlayerData` blocks (light, medium and heavy, each inherited by the female and Bioderm variants —
+section 08). Whatever ground friction base leaves in place while skiing, Classic actively switches off.
+
+**Reduced drag makes the removed cap matter.** Halving `drag`/`maxdrag` means whatever speed a player
+builds — now unconstrained by `horizMaxSpeed` — decays far more slowly afterward. The three changes
+compound: friction removed at the point of contact, the speed ceiling removed above it, and the ambient
+decay that would otherwise erode the result cut roughly in half.
+
+**Vertical speed moves the opposite direction, and gets standardised.** `upMaxSpeed` drops from a
+per-weight value to a flat 52 for every armour, and `upResistSpeed` converges similarly to 20.89. Where
+horizontal movement is deliberately unbounded, vertical movement is capped lower than base *and* made
+uniform across weight classes — reading naturally as a check against pogo-jet spam height rather than
+against horizontal ski speed.
+
+**Jet force rose independently.** +42% thrust-to-weight for light armour, +34% medium, +32% heavy — on
+top of everything above, not instead of it. A skiing player who taps a jet gets more from it than in base,
+compounding rather than replacing the horizontal changes.
+
+None of this is stated anywhere in Classic's own documentation — the readme's changelog is silent on
+every field in this table, unlike the gravity change and the suicide-penalty change (section 32), which
+both carry explanatory comments. The numbers speak for themselves: this is the "faster and more exciting"
+claim from section 21's opening quote, made specific and falsifiable rather than left as marketing copy.
 
 ## What it changed
 
@@ -201,7 +269,9 @@ patch you will be using the patch's own launcher or `-nologin`. See
 ## Related
 
 - [21 · Classic](../21-classic/README.md) — why Classic exists, and the lineage
-- [23 · Classic 1.5.2](../23-classic-152/README.md) — where 1.1 went next
+- [23 · Classic 1.5.2](../23-classic-152/README.md) — where 1.1 went next, and confirmation this physics model never changed
+- [08 · The base ruleset](../08-base-ruleset/README.md#skiing-friction-and-momentum) — the base values this page's table compares against
+- [Armors](../03-content-recipes/armors.md#the-skiing-and-momentum-fields) — what each movement field means
 - [Launch options](../01-getting-started/launch-options.md) — `-mod`, `-dedicated`, `ispawn.exe`
 - [Packaging](../06-shipping/packaging.md) — why the launchers delete `.dso` files
 - [Gametypes](../05-gameplay-systems/gametypes.md) — adding a gametype the way DnD does

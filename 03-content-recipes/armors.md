@@ -119,6 +119,7 @@ armor's mass changes. Keep it if you derive an armor with a different mass.
    minJumpSpeed = 20;
    maxJumpSpeed = 30;
 
+   // noFrictionOnSki is not set by any base armor — shown below for clarity
    horizMaxSpeed     = 68;
    horizResistSpeed  = 33;
    horizResistFactor = 0.35;
@@ -129,12 +130,22 @@ armor's mass changes. Keep it if you derive an armor with a different mass.
    upResistFactor = 0.3;
 ```
 
-These are the numbers that define Tribes movement. `horizResistSpeed` is the speed above which drag
-starts to bite; `horizResistFactor` is how hard; `horizMaxSpeed` is the hard cap. Raise `horizMaxSpeed`
-and lower `horizResistFactor` and you get the "fast" feel that many community mods went for.
+These are the numbers that define Tribes movement. `runSurfaceAngle = 70` means the player can run on
+slopes up to 70°; beyond that they slide, which is what makes skiing possible in the first place —
+identical across every base armor, so all three weights start skiing at the same slope.
 
-`runSurfaceAngle = 70` means the player can run on slopes up to 70°; beyond that they slide, which is what
-makes skiing possible.
+Once skiing, three fields govern the ride: `horizResistSpeed` is the speed above which drag starts to
+bite; `horizResistFactor` is how hard; `horizMaxSpeed` is the hard cap. `noFrictionOnSki` is a separate
+switch — it removes ground friction entirely while skiing, on top of whatever the three fields above are
+doing. It is a real, engine-recognised field **[binary]**, but no base armor assigns it a value; base
+skiing runs on whatever the compiled-in default is, and this handbook has not verified that default from
+source. Treat it as a field that exists purely for a mod to opt into.
+
+**Raise `horizMaxSpeed`, zero `horizResistFactor`, and set `noFrictionOnSki = true`, and you get the
+"fast" feel that most speed-focused community mods went for** — this is not hypothetical. Classic does
+exactly this, on every armor, and the resulting numbers are fully documented in
+[22 · Classic 1.1](../22-classic-1-1/README.md#the-physics-change-skiing-friction-and-momentum) as a
+worked, field-by-field example of retuning this exact system.
 
 ### Heat signature
 
@@ -431,6 +442,8 @@ The shipped packs use exactly these. See [Packs](packs.md).
 - [Packs](packs.md) — per-object modification patterns
 - [Damage and type masks](damage-and-typemasks.md) — the `*PlayerDamageProfile` parents
 - [Audio](audio.md) — the footstep and impact sound profiles
+- [08 · The base ruleset](../08-base-ruleset/README.md#skiing-friction-and-momentum) — the values base ships, all three weights
+- [22 · Classic 1.1](../22-classic-1-1/README.md#the-physics-change-skiing-friction-and-momentum) — this system, retuned, field by field
 
 > **On a patched install:** nothing on this page changes. Neither TribesNEXT patch touches gameplay
 > content — see [03 · Content Recipes](README.md#under-the-community-patches).

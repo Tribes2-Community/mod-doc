@@ -105,6 +105,33 @@ destroys the reader's ability to see what you changed. This is the same instinct
 `gravityMod = 20.0 / mabs($Classic::gravSetting)` — express a tuning value as the relationship it
 encodes.
 
+### Skiing, friction and momentum
+
+What each field does — `runSurfaceAngle`, `horizMaxSpeed`, `horizResistSpeed`, `horizResistFactor`,
+`noFrictionOnSki`, `drag`/`maxdrag` — is covered in full in
+[Armors](../03-content-recipes/armors.md#the-skiing-and-momentum-fields). The values base actually ships,
+across all three weights, from `scripts/player.cs` **[script]**:
+
+| | Light | Medium | Heavy |
+|---|---:|---:|---:|
+| `runSurfaceAngle` | 70 | 70 | 70 |
+| `horizMaxSpeed` | 68 | 60 | 52 |
+| `horizResistSpeed` | 33 | 28 | 23 |
+| `horizResistFactor` | 0.35 | 0.32 | 0.29 |
+| `upMaxSpeed` | 80 | 70 | 60 |
+| `drag` / `maxdrag` | 0.275 / 0.4 | 0.3 / 0.5 | 0.33 / 0.6 |
+| `noFrictionOnSki` | *(unset)* | *(unset)* | *(unset)* |
+
+The ski-trigger angle is identical across weights; everything governing what happens once you are skiing
+scales down with mass — light armour skis fastest and is reined in most gently, heavy armour is capped
+lowest and resisted hardest, consistent with light being the mobility class and heavy the durability
+class. `noFrictionOnSki` is set by **no** base armour, of any weight — see
+[Armors](../03-content-recipes/armors.md#the-skiing-and-momentum-fields) for what leaving it unset
+implies and does not imply.
+
+This whole system is exactly what [22 · Classic 1.1](../22-classic-1-1/README.md#the-physics-change-skiing-friction-and-momentum)
+retunes, field by field, and the base numbers above are the "before" side of that comparison.
+
 ## The gametypes
 
 Eleven ship in `base/scripts.vl2` **[script]**:
@@ -257,6 +284,8 @@ Two interactions worth knowing:
 
 - [09 · The Support Pack](../09-support-pack/README.md) — the community library layered on this base
 - [21 · Classic](../21-classic/README.md) — the ruleset that replaced this one in practice
+- [Armors](../03-content-recipes/armors.md#the-skiing-and-momentum-fields) — what every movement field means, field by field
+- [22 · Classic 1.1](../22-classic-1-1/README.md#the-physics-change-skiing-friction-and-momentum) — the same fields, retuned
 - [Gametypes](../05-gameplay-systems/gametypes.md) — extending `DefaultGame`
 - [Datablocks](../02-engine-model/datablocks.md) — how armour inheritance resolves
 - [Global variables](../90-reference/global-variables.md) — the full `$Host::` reference

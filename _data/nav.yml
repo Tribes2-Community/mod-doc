@@ -127,6 +127,20 @@
     - { title: "29 · In operation",         url: /29-tacoserver-operation/ }
     - { title: "30 · Running Classic today", url: /30-running-classic-today/ }
 
+- num: "31–39"
+  title: Gametypes
+  url: /31-capture-the-flag/
+  pages:
+    - { title: "31 · Capture the Flag",     url: /31-capture-the-flag/ }
+    - { title: "32 · Defend and Destroy",   url: /32-defend-and-destroy/ }
+    - { title: "33 · Siege",                url: /33-siege/ }
+    - { title: "34 · Bounty",               url: /34-bounty/ }
+    - { title: "35 · Capture and Hold",     url: /35-capture-and-hold/ }
+    - { title: "36 · Deathmatch",           url: /36-deathmatch/ }
+    - { title: "37 · Hunters & Team Hunters", url: /37-hunters/ }
+    - { title: "38 · Rabbit",               url: /38-rabbit/ }
+    - { title: "39 · Team Rabbit 2",        url: /39-team-rabbit-2/ }
+
 - num: "40"
   title: The Construction Mod
   url: /40-construction-mod/

@@ -83,12 +83,13 @@ flowchart TD
     S --> CL["21–24 · Classic<br/>the ruleset that became the game,<br/>and its optional-rule system"]
     CL --> EV["25–27 · Evolution Admin Mod<br/>generated packages, leased admin,<br/>and a ten-year-old bug"]
     EV --> TS["28–30 · TacoServer<br/>the modern codebase:<br/>lineage, features, running it"]
-    TS --> M["40 · The Construction Mod<br/>a total conversion, studied:<br/>what it did and why"]
+    TS --> GT["31–39 · Gametypes<br/>base and Classic, side by side,<br/>ending with Team Rabbit 2"]
+    GT --> M["40 · The Construction Mod<br/>a total conversion, studied:<br/>what it did and why"]
     M --> FK["41–48 · The Construction forks<br/>eight derivatives of 0.69a,<br/>compared against the base"]
     FK --> G["90 · Reference<br/>console functions, class tree,<br/>file formats, tutorial index"]
 ```
 
-Sections **07**–**09**, **21–30** and **40–48** are context rather than instruction — what your users are
+Sections **07**–**09**, **21–39** and **40–48** are context rather than instruction — what your users are
 running, what libraries exist, and how the mods that shaped the live game were built. Numbers between 30
 and 40 are left free for further studies.
 
@@ -239,6 +240,23 @@ The modern codebase most public servers run today.
 | [28 · Lineage & architecture](28-tacoserver/README.md) | Overlay on 1.5.2, the `NoEvo` severance, one package per feature |
 | [29 · In operation](29-tacoserver-operation/README.md) | Population-scaled rules, ~180 prefs, installing and running it |
 | [30 · Running Classic today](30-running-classic-today/README.md) | **Which codebase to use in 2026**, and what the lineage teaches |
+
+### 31–39 · Gametypes
+Base and Classic, gametype by gametype — what Classic shadowed, what it left alone, and what it patched
+around without shadowing. Ends with Team Rabbit 2, a total-conversion sport mod shipped in its own
+archives.
+
+| Page | What it answers |
+|---|---|
+| [31 · Capture the Flag](31-capture-the-flag/README.md) | Base vs Classic's own `CTFGame.cs`, and Spawn CTF's no-economy loadout |
+| [32 · Defend and Destroy](32-defend-and-destroy/README.md) | The 39-constant scoring table, and the suicide-penalty line that became a Classic-wide rule |
+| [33 · Siege](33-siege/README.md) | The two-round time trial, and Classic's defensive-scoring additions |
+| [34 · Bounty](34-bounty/README.md) | Per-player target/pursuer/bystander state, and the no-static-defence ban list |
+| [35 · Capture and Hold](35-capture-and-hold/README.md) | Twelve-second capture windows, and turrets that convert rather than just fall |
+| [36 · Deathmatch](36-deathmatch/README.md) | The minimal gametype, and TacoServer's own 970-line descendant |
+| [37 · Hunters & Team Hunters](37-hunters/README.md) | GREED/HOARD as vote-toggled rules, and the game outing hoarders automatically |
+| [38 · Rabbit](38-rabbit/README.md) | Solo flag-carrier keep-away, and the pseudo-team trick that makes it work |
+| [39 · Team Rabbit 2](39-team-rabbit-2/README.md) | **A total-conversion sport mod** — its own archives, a ten-dimensional bonus matrix, and Classic's six-file integration |
 
 ### 40 · [The Construction Mod](40-construction-mod/README.md)
 | Page | What it answers |

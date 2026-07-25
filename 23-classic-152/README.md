@@ -131,6 +131,17 @@ The flight-ceiling floor is a good defensive-programming example — rather than
 declare a sane ceiling, 1.4 clamps it: "If flight ceiling is below minimum, it is set to minimum"
 **[mod-script]**. Missions are third-party data; validate them.
 
+### Skiing, friction and momentum: unchanged since 1.1
+
+[22 · Classic 1.1](../22-classic-1-1/README.md#the-physics-change-skiing-friction-and-momentum)
+documents the full field-by-field movement physics change — the deleted horizontal speed governor,
+`noFrictionOnSki`, halved drag, raised jet force, unified vertical speed cap. Fingerprinting every
+`PlayerData` movement field across all three armours confirms it is **byte-identical between 1.1 and
+1.5.2** **[mod-script]**: `runSurfaceAngle`, `horizMaxSpeed`, `horizResistSpeed`, `horizResistFactor`,
+`drag`, `maxdrag`, `jetForce` and `upMaxSpeed`/`upResistSpeed` carry the same values in every release this
+page covers. Four version bumps and eighteen months of exploit fixes, admin features and gametype changes
+never touched the movement model — it was set once, in October 2002, and never revisited.
+
 ## Running it
 
 Install order matters, and the community convention is unforgiving:
