@@ -2,7 +2,7 @@
 
 > **A teaching handbook for writing mods against vanilla Tribes 2, patched build 25034 (retail v1.05).**
 > It merges two bodies of knowledge: the surviving community modding tutorials (2002–2003 era) and
-> this project's reverse engineering of `Tribes2.exe` and the shipped V12 game data.
+> this project's client analysis of the V12 Engine build 25034 and the shipped game data.
 
 ---
 

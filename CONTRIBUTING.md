@@ -89,8 +89,8 @@ plain text, never linked.
 Everything the published site needs is inside this folder. Nothing links to a
 sibling directory, an absolute filesystem path, or a development server.
 
-Source material that is *not* here — the tutorial corpus, the project's reverse
-engineering notes, extracted game data — is referenced by name in prose or in a
+Source material that is *not* here — the tutorial corpus, this project's client analysis of the
+V12 Engine build 25034, extracted game data — is referenced by name in prose or in a
 provenance table, so a claim can be traced without the site depending on it.
 Cite it; do not link it.
 
