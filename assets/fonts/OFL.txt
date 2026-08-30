@@ -1,0 +1,8 @@
+Saira Stencil One, by Omnibus-Type, is used here under the SIL Open Font
+License, Version 1.1.
+
+  Project:  https://github.com/Omnibus-Type/Saira
+  Licence:  https://scripts.sil.org/OFL
+
+It is self-hosted rather than loaded from Google Fonts so the site makes no
+third-party request, and so it keeps working where that host is blocked.

@@ -58,6 +58,34 @@ $content-max: 54rem;
 // Tribes 2 ships Univers (body) and Sui Generis (display). Neither is
 // redistributable, so these are system stacks chosen to sit in the same
 // register: condensed geometric for display, humanist for body.
+// Saira Stencil One, self-hosted so the site makes no third-party request and
+// keeps working where Google Fonts is blocked. SIL OFL; see assets/fonts/OFL.txt.
+// Single weight (400) -- it is used only for titles, never for running text.
+@font-face {
+  font-family: "Saira Stencil One";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/saira-stencil-one-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Saira Stencil One";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/saira-stencil-one-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+// Titles only: the masthead brand and the page h1.
+$font-title:   "Saira Stencil One", "Eurostile", "Michroma", sans-serif;
+
 $font-display: "Eurostile", "Bank Gothic", "Michroma", "Agency FB",
                "Franklin Gothic Medium", "Oswald", "Roboto Condensed",
                "Segoe UI Semibold", system-ui, sans-serif;
@@ -108,7 +136,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.55rem;
-    font-family: $font-display;
+    font-family: $font-title;
     font-size: 0.95rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -241,6 +269,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  font-family: $font-title;
   font-size: 1.9rem;
   margin-top: 0.4rem;
   padding-bottom: 0.6rem;
