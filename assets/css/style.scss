@@ -105,6 +105,9 @@ body {
   border-bottom: 1px solid $rule;
 
   .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
     font-family: $font-display;
     font-size: 0.95rem;
     letter-spacing: 0.16em;
@@ -112,6 +115,12 @@ body {
     color: $t2-teal-bright;
     text-decoration: none;
     white-space: nowrap;
+
+    .brand-mark {
+      width: 1.6em;
+      height: 1.6em;
+      flex: none;
+    }
 
     .brand-sub {
       color: $t2-teal-dark;
