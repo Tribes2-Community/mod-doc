@@ -4,10 +4,10 @@ description: >-
   the community patches, and the Construction mod family.
 lang: en-GB
 
-# GitHub Pages project site
-url: https://geekofwires.github.io
-baseurl: /tribes2-mod-doc
-repository: GeekOfWires/tribes2-mod-doc
+# Served at the apex of its own subdomain, so no baseurl prefix.
+url: https://modding.tribes2wiki.com
+baseurl: ""
+repository: Tribes2-Community/mod-doc
 
 # Rendering ------------------------------------------------------------------
 markdown: kramdown
